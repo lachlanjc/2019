@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "name": "2019",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}

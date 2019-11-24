@@ -1,0 +1,29 @@
+{
+  "name": "@lachlanjc/2019",
+  "description": "@lachlanjc’s 2019 year in review",
+  "version": "1.0.0",
+  "private": true,
+  "author": "Lachlan Campbell <lachlan@hackpenn.com>",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next"
+  },
+  "dependencies": {
+    "@emotion/styled": "^10.0.23",
+    "@hackclub/icons": "^0.0.2",
+    "@mdx-js/react": "^1.5.1",
+    "@theme-ui/components": "^0.2.49",
+    "@theme-ui/presets": "^0.2.44",
+    "@zeit/next-mdx": "^1.2.0",
+    "babel-plugin-emotion": "^10.0.23",
+    "emotion": "^10.0.23",
+    "emotion-server": "^10.0.17",
+    "lodash": "^4.17.15",
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "theme-ui": "^0.2.49"
+  },
+  "license": "MIT"
+}
