@@ -1,5 +1,6 @@
 {
   "version": 2,
   "name": "2019",
+  "public": true,
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

@@ -1,7 +1,6 @@
 import { Box, Flex, Text, Link as A } from '@theme-ui/components'
 import { Styled, useColorMode } from 'theme-ui'
 import Link from 'next/link'
-import Icon from './icon'
 import Avatar from './avatar'
 
 const ColorButton = ({ mode, ...props }) => (
