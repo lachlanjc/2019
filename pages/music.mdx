@@ -1,8 +1,10 @@
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import { Artist, Album } from '../components/music'
-import TopSongs from '../components/top-songs'
+import SongList from '../components/song-list'
+import topSongs from '../data/top-songs.json'
 
 <Box
+  as="header"
   sx={{
     pt: [5, 6],
     pb: [3, 5],
@@ -62,4 +64,4 @@ import TopSongs from '../components/top-songs'
 
 </Container>
 
-<TopSongs />
+<SongList songs={topSongs} />

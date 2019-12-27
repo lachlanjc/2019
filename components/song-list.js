@@ -1,7 +1,6 @@
 import { Grid, Box, Text, Image } from '@theme-ui/components'
-import songs from '../data/top-songs.json'
 
-export default () => (
+export default ({ songs = [] }) => (
   <Grid
     as="ol"
     gap={0}
