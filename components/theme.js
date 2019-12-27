@@ -1,11 +1,7 @@
 import { base } from '@theme-ui/presets'
 import { merge } from 'lodash'
 
-export const breakpoints = [32, 48, 64].map(w => `${w}em`)
-
-export const space = [0, 4, 8, 16, 32, 64, 128, 256, 512]
-
-export const fontSizes = [14, 18, 24, 32, 48, 64, 96, 128, 160, 192, 256]
+export const breakpoints = [32, 48, 64, 96, 128].map(w => `${w}em`)
 
 export const palette = {
   darker: '#121217',
@@ -14,10 +10,18 @@ export const palette = {
   black: '#1f2d3d',
   steel: '#273444',
   slate: '#3c4858',
-  grey: '#8492a6',
+  muted: '#8492a6',
   smoke: '#e0e6ed',
   snow: '#f9fafc',
   white: '#ffffff',
+
+  red: '#ec3750',
+  orange: '#ff8c37',
+  yellow: '#f1c40f',
+  green: '#33d6a6',
+  cyan: '#5bc0de',
+  blue: '#338eda',
+
   primary: '#007a87',
   primaryWash: '#bfe6ea',
   primaryWashLight: '#dffbfd',
@@ -36,45 +40,71 @@ export const palette = {
 
 const theme = merge(base, {
   breakpoints,
-  space,
-  fontSizes,
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fontSizes: [12, 16, 20, 24, 32, 48, 64, 96, 128],
   initialColorMode: 'light',
   useColorSchemeMediaQuery: true,
   colors: {
     ...palette,
     text: palette.black,
-    background: palette.snow,
+    background: palette.white,
     elevated: palette.white,
-    muted: palette.grey,
+    sunken: palette.smoke,
+    border: palette.smoke,
+    placeholder: palette.muted,
+    muted: palette.muted,
+    secondary: palette.slate,
+    primary: palette.primary,
+    accent: palette.alt,
+    textInverse: palette.white,
+    header: palette.snow,
+    nav: palette.white,
     modes: {
       dark: {
         text: palette.white,
         background: palette.dark,
-        elevated: palette.darkless
+        elevated: palette.darkless,
+        sunken: palette.darker,
+        border: palette.darkless,
+        placeholder: palette.slate,
+        secondary: palette.muted,
+        // muted: palette.muted,
+        primary: palette.primaryLight,
+        // accent: palette.altDark,
+        textInverse: palette.dark,
+        header: palette.darkless,
+        nav: palette.primary
       }
     }
   },
   fonts: {
-    heading: 'inherit',
-    body: '"Roobert", system-ui, sans-serif',
-    mono: '"iA Quattro", Menlo, monospace'
+    body:
+      'Roobert, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    accent:
+      '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+    mono: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
   },
   lineHeights: {
-    body: 1.5,
+    title: 1,
     heading: 1.125,
-    tight: 0.875
+    subheading: 1.25,
+    body: 1.5
   },
   fontWeights: {
-    body: 'normal',
-    bold: 'bold'
+    body: 400,
+    bold: 700
   },
   letterSpacings: {
-    heading: '-0.05em',
-    caps: '0.05em'
+    title: '-0.009em',
+    headline: '0.009em'
   },
   sizes: {
+    superultrawide: 2048,
+    ultrawide: 1536,
+    wide: 1200,
+    containerplus: 1024,
     container: 768,
-    wide: 1080
+    narrow: 512
   },
   radii: {
     default: 6,
@@ -82,84 +112,185 @@ const theme = merge(base, {
     circle: 99999
   },
   shadows: {
+    small: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 2px 4px rgba(0, 0, 0, 0.0625)',
     card: '0 4px 8px rgba(0, 0, 0, 0.125)',
-    sheet: '0 8px 32px rgba(0, 0, 0, 0.0625)'
+    elevated: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 8px 12px rgba(0, 0, 0, 0.125)'
   },
   text: {
     heading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
+      fontWeight: 'bold',
       lineHeight: 'heading'
+    },
+    title: {
+      fontWeight: 'bold',
+      lineHeight: 'title',
+      letterSpacing: 'title',
+      fontSize: [4, 5, 6]
+    },
+    subtitle: {
+      fontSize: [2, 3, null, null, 4],
+      fontWeight: 'body',
+      letterSpacing: 'headline',
+      lineHeight: 'subheading'
+    },
+    headline: {
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      letterSpacing: 'headline',
+      fontSize: 4,
+      mt: 3,
+      mb: 3
+    },
+    subheadline: {
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      letterSpacing: 'headline',
+      fontSize: 2,
+      mt: 0,
+      mb: 3
+    },
+    caption: {
+      color: 'muted',
+      fontFamily: 'accent',
+      fontWeight: 'body',
+      letterSpacing: 'headline'
+    },
+    accent: {
+      fontFamily: 'accent'
     }
-    //   display: {
-    //     fontFamily: 'heading',
-    //     fontWeight: 'heading',
-    //     lineHeight: 'heading',
-    //     letterSpacing: 'heading',
-    //     fontSize: [5, 6, 7]
-    //   },
-    //   caps: {
-    //     textTransform: 'uppercase',
-    //     letterSpacing: 'caps'
-    //   }
   },
-  variants: {
+  badges: {
+    pill: {
+      borderRadius: 'circle'
+    }
+  },
+  buttons: {
+    primary: {
+      bg: 'primary',
+      color: 'background',
+      cursor: 'pointer',
+      fontFamily: 'body',
+      fontWeight: 'bold',
+      svg: { ml: -1, mr: 2 }
+    },
+    inverted: {
+      bg: 'invertedPrimary',
+      color: 'invertedText',
+      cursor: 'pointer',
+      fontFamily: 'body',
+      fontWeight: 'bold',
+      svg: { ml: -1, mr: 2 }
+    }
+  },
+  forms: {
+    input: {
+      bg: 'elevated',
+      color: 'text',
+      fontFamily: 'body',
+      borderRadius: 'base',
+      boxShadow: 'small',
+      transition: 'box-shadow .125s ease-in-out',
+      border: 0,
+      ':hover,:focus': { boxShadow: 'card' },
+      '::-webkit-input-placeholder': { color: 'placeholder' },
+      '::-moz-placeholder': { color: 'placeholder' },
+      ':-ms-input-placeholder': { color: 'placeholder' },
+      '&[type="search"]::-webkit-search-decoration': { display: 'none' }
+    },
+    label: {
+      color: 'text',
+      fontWeight: 'medium'
+    },
+    hidden: {
+      position: 'absolute',
+      height: '1px',
+      width: '1px',
+      overflow: 'hidden',
+      clip: 'rect(1px, 1px, 1px, 1px)',
+      whiteSpace: 'nowrap'
+    }
+  },
+  cards: {
+    primary: {
+      bg: 'elevated',
+      color: 'text',
+      p: [3, 4],
+      borderRadius: 'extra',
+      boxShadow: 'card',
+      input: { boxShadow: 'none !important' }
+    },
+    sunken: {
+      bg: 'sunken',
+      p: [3, 4],
+      borderRadius: 'extra',
+      'input, a': { bg: 'header', boxShadow: 'none !important' }
+    },
+    nav: {
+      bg: 'elevated',
+      color: 'text',
+      px: 3,
+      py: 4,
+      borderRadius: 'extra',
+      boxShadow: 'card',
+      textDecoration: 'none',
+      position: 'relative',
+      overflow: 'hidden',
+      fontSize: 2,
+      fontWeight: 'bold',
+      lineHeight: 'title',
+      WebkitTapHighlightColor: 'transparent',
+      transition: 'transform .125s ease-in-out, box-shadow .125s ease-in-out',
+      ':hover,:focus': {
+        transform: 'scale(1.0625)',
+        boxShadow: 'elevated'
+      }
+    }
+  },
+  layout: {
     container: {
       width: '100%',
-      maxWidth: 'container',
+      maxWidth: ['container', null, null, null, 'wide'],
       mx: 'auto',
       px: 3
     },
-    heading: {
-      fontFamily: 'heading',
-      fontWeight: 'heading',
-      lineHeight: 'heading'
+    wide: {
+      width: '100%',
+      maxWidth: ['wide', null, null, null, 'ultrawide'],
+      mx: 'auto',
+      px: 3
     },
-    card: {
-      bg: 'elevated',
-      p: [3, 4],
-      borderRadius: 'extra',
-      boxShadow: 'card'
+    copy: {
+      width: '100%',
+      maxWidth: ['narrowplus', null, null, null, 'container'],
+      mx: 'auto',
+      color: 'text'
     },
-    sheet: {
-      bg: 'elevated',
-      borderRadius: 'extra',
-      boxShadow: 'sheet',
-      overflow: 'hidden'
-    },
-    avatar: {
-      borderRadius: 'circle',
-      objectFit: 'cover',
-      objectPosition: 'center',
-      flexShrink: 0
+    narrow: {
+      width: '100%',
+      maxWidth: ['narrow', null, null, null, 'container'],
+      mx: 'auto',
+      px: 3
     }
   },
   styles: {
     a: {
-      color: 'primary',
-      cursor: 'pointer',
-      ':hover, :focus': {
-        color: 'secondary'
-      }
+      color: 'primary'
     },
-    p: {
-      fontFamily: 'mono'
-    },
-    img: {
-      maxWidth: '100%',
-      height: 'auto'
-    },
-    navitem: {
-      display: 'inline-flex',
-      alignItems: 'center',
-      color: 'inherit',
-      textDecoration: 'none',
-      fontWeight: 'bold',
-      ':hover,:focus': {
-        color: 'primary'
-      }
+    hr: {
+      borderColor: 'border',
+      my: [3, 4]
     }
   }
 })
+theme.styles.root = {
+  fontFamily: theme.fonts.body,
+  lineHeight: theme.lineHeights.body,
+  fontWeight: theme.fontWeights.body,
+  color: 'text',
+  margin: 0,
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column'
+}
 
 export default theme
