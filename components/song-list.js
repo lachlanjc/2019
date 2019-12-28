@@ -22,6 +22,7 @@ export default ({ songs = [], monthly = false }) => (
         gap={3}
         sx={{
           p: [1, 2],
+          overflow: 'hidden',
           alignItems: 'center',
           gridTemplateColumns: '24px 64px 1fr',
           borderBottom: '0.5px solid',

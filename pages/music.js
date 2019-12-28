@@ -10,8 +10,8 @@ export default () => {
       <Box
         as="header"
         sx={{
-          pt: [5, 6],
-          pb: [3, 5],
+          pt: 6,
+          pb: 5,
           px: 3,
           bg: '#ff365d',
           color: 'textInverse'
@@ -68,7 +68,7 @@ export default () => {
       <SongList songs={monthlySongs} monthly />
       <Container sx={{ pt: [3, 4, 5], pb: [2, 3] }}>
         <Heading as="h2" variant="headline">
-          Top songs
+          Top 100 songs
         </Heading>
       </Container>
       <SongList songs={topSongs} />

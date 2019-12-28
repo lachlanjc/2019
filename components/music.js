@@ -1,10 +1,7 @@
 import { Grid, Box, Image, Avatar, Text } from '@theme-ui/components'
 
 export const Artist = ({ label, name, artwork }) => (
-  <Grid
-    gap={[3, 4]}
-    sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}
-  >
+  <Grid gap={4} sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}>
     <Avatar src={artwork} width={128} alt={name} />
     <Box>
       <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
@@ -22,10 +19,7 @@ export const Artist = ({ label, name, artwork }) => (
 )
 
 export const Album = ({ label, name, artwork, artist }) => (
-  <Grid
-    gap={[3, 4]}
-    sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}
-  >
+  <Grid gap={4} sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}>
     <Image
       src={artwork.replace('1024x1024', '256x256')}
       width={256}
