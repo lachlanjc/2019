@@ -7,7 +7,7 @@ const makeTitle = title => (title === name ? title : `${title} – ${name}`)
 export default ({
   title = name,
   description = 'Looking back at Lachlan Campbell’s 2019.',
-  image = 'https://hackathons.now.sh/card.png',
+  // image = 'https://hackathons.now.sh/card.png',
   color = palette.primary
 }) => (
   <Head>
@@ -20,6 +20,9 @@ export default ({
     <meta key="desc" name="description" content={description} />
     <meta key="og_desc" property="og:description" content={description} />
     <meta key="twitter_desc" name="twitter:description" content={description} />
+    <meta key="theme_color" name="theme-color" content={color} />
+    <meta key="tile_color" name="msapplication-TileColor" content={color} />
+    {/*
     <meta key="og_img" property="og:image" content={image} />
     <meta
       key="twitter_card"
@@ -27,8 +30,6 @@ export default ({
       content="summary_large_image"
     />
     <meta key="twitter_img" name="twitter:image" content={image} />
-    <meta key="theme_color" name="theme-color" content={color} />
-    <meta key="tile_color" name="msapplication-TileColor" content={color} />
     <link
       key="safari_icon"
       rel="mask-icon"
@@ -56,5 +57,6 @@ export default ({
       href="/favicon-16x16.png"
     />
     <link key="manifest" rel="manifest" href="/site.webmanifest" />
+    */}
   </Head>
 )
