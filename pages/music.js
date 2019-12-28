@@ -1,12 +1,17 @@
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import { Artist, Album } from '../components/music'
+import Meta from '../components/meta'
 import SongList from '../components/song-list'
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
+// import springSongs from '../data/spring-songs.json'
+// import summerSongs from '../data/summer-songs.json'
+// import fallSongs from '../data/fall-songs.json'
 
 export default () => {
   return (
     <Box as="main" sx={{ color: 'text' }}>
+      <Meta title="Music" description="Lachlan Campbell’s top music of 2019." />
       <Box
         as="header"
         sx={{
