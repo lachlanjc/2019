@@ -11,12 +11,9 @@ export default ({ songs = [], monthly = false }) => (
     as="ol"
     gap={0}
     sx={{
-      px: 3,
       gridTemplateColumns: 'repeat(auto-fill, minmax(384px, 1fr))',
       lineHeight: 'subheading',
-      scrollSnapType: 'y mandatory',
-      overflowY: 'auto',
-      maxHeight: '85vh'
+      px: 3
     }}
   >
     {songs.map((song, i) => (
@@ -25,12 +22,10 @@ export default ({ songs = [], monthly = false }) => (
         gap={3}
         sx={{
           p: [1, 2],
-          gridTemplateColumns: '24px 64px 1fr',
           alignItems: 'center',
+          gridTemplateColumns: '24px 64px 1fr',
           borderBottom: '0.5px solid',
-          borderBottomColor: 'border',
-          overflow: 'hidden',
-          scrollSnapAlign: 'start'
+          borderBottomColor: 'border'
         }}
         key={song.title}
       >
