@@ -2,6 +2,7 @@ import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import { Artist, Album } from '../components/music'
 import SongList from '../components/song-list'
 import topSongs from '../data/top-songs.json'
+import monthlySongs from '../data/monthly-songs.json'
 
 export default () => {
   return (
@@ -64,7 +65,7 @@ export default () => {
           Songs of the months
         </Heading>
       </Container>
-      <SongList songs={topSongs} />
+      <SongList songs={monthlySongs} monthly />
       <Container sx={{ pt: [3, 4, 5], pb: [2, 3] }}>
         <Heading as="h2" variant="headline">
           Top songs

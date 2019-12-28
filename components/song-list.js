@@ -1,6 +1,12 @@
 import { Grid, Box, Text, Image } from '@theme-ui/components'
 
-export default ({ songs = [] }) => (
+const getMonth = i => {
+  let dt = new Date(`2019-${i.toString().length === 1 ? `0` : ''}${i}`)
+  dt.setDate(dt.getDate() + 1)
+  return dt.toLocaleString('default', { month: 'long' })
+}
+
+export default ({ songs = [], monthly = false }) => (
   <Grid
     as="ol"
     gap={0}
@@ -28,7 +34,12 @@ export default ({ songs = [] }) => (
         }}
         key={song.title}
       >
-        <span>{i + 1}.</span>
+        <Text
+          as="span"
+          sx={{ textTransform: 'uppercase', fontSize: monthly ? 0 : 1 }}
+        >
+          {monthly ? getMonth(i + 1).slice(0, 3) : `${i + 1}.`}
+        </Text>
         {song.artwork ? (
           <Image
             src={song.artwork.replace('512x512', '128x128')}
