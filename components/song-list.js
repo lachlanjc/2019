@@ -7,7 +7,10 @@ export default ({ songs = [] }) => (
     sx={{
       px: 3,
       gridTemplateColumns: 'repeat(auto-fill, minmax(384px, 1fr))',
-      lineHeight: 'subheading'
+      lineHeight: 'subheading',
+      scrollSnapType: 'y mandatory',
+      overflowY: 'auto',
+      maxHeight: '85vh'
     }}
   >
     {songs.map((song, i) => (
@@ -32,13 +35,13 @@ export default ({ songs = [] }) => (
             loading="lazy"
             width={64}
             alt={`${song.album} artwork`}
-            sx={{ borderRadius: 'default' }}
+            sx={{ borderRadius: 'small' }}
           />
         ) : (
           <Box
             sx={{
               bg: 'border',
-              borderRadius: 'default',
+              borderRadius: 'small',
               width: 64,
               height: 64
             }}
@@ -55,15 +58,5 @@ export default ({ songs = [] }) => (
         </div>
       </Grid>
     ))}
-    <style jsx>{`
-      ol {
-        line-height: 1.375;
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        height: 100%;
-        max-height: 85vh;
-        text-align: left;
-      }
-    `}</style>
   </Grid>
 )

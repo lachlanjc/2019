@@ -7,7 +7,7 @@ export const Artist = ({ label, name, artwork }) => (
   >
     <Avatar src={artwork} width={128} alt={name} />
     <Box>
-      <Text as="span" sx={{ textTransform: 'uppercase' }}>
+      <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
         {label}
       </Text>
       <Text
@@ -33,7 +33,7 @@ export const Album = ({ label, name, artwork, artist }) => (
       sx={{ borderRadius: 'default' }}
     />
     <div>
-      <Text as="span" sx={{ textTransform: 'uppercase' }}>
+      <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
         {label}
       </Text>
       <Text as="strong" sx={{ fontSize: [2, 3, 4], display: 'block' }}>

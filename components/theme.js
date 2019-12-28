@@ -107,6 +107,7 @@ const theme = merge(base, {
     narrow: 512
   },
   radii: {
+    small: 3,
     default: 6,
     extra: 9,
     circle: 99999
@@ -138,16 +139,10 @@ const theme = merge(base, {
       lineHeight: 'heading',
       letterSpacing: 'headline',
       fontSize: 4,
-      mt: 3,
-      mb: 3
-    },
-    subheadline: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      letterSpacing: 'headline',
-      fontSize: 2,
+      textAlign: 'center',
+      textTransform: 'uppercase',
       mt: 0,
-      mb: 3
+      mb: [3, 4]
     },
     caption: {
       color: 'muted',
