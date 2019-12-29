@@ -7,11 +7,7 @@ export const Artist = ({ label, name, artwork }) => (
       <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
         {label}
       </Text>
-      <Text
-        as="strong"
-        variant="accent"
-        sx={{ fontSize: [2, 3, 4], display: 'block' }}
-      >
+      <Text as="strong" sx={{ fontSize: [2, 3, 4], display: 'block' }}>
         {name}
       </Text>
     </Box>

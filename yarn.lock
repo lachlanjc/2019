@@ -5317,6 +5317,16 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
+react-music-embed@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-music-embed/-/react-music-embed-1.0.1.tgz#c774ef9b5ca7caa3edb6b654d76ea9896ad17bec"
+  integrity sha512-j6fWYt0dP+WIyp+EQlUSJjlWYC1vaKId3TYRSj6WFYJUUNPe9VgEpteYgSJpkPCFxkE/z+M358I8Nd1K8xBI/A==
+
+react-song-embed@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-song-embed/-/react-song-embed-1.0.0.tgz#0ee715b498f2a79c2978b8b8f6d7d5eae8cc1bb1"
+  integrity sha512-EOJBeBrOmYj83SMaSBWgXikH27pVIX9msuR1skl7rtJflsir3XkXDKMAV8QyPvqfilIYSoSBnaKtpzna0xHtgg==
+
 react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
