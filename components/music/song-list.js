@@ -1,5 +1,5 @@
-import { Grid, Box, Text, Image, IconButton } from '@theme-ui/components'
-import { PlayCircle } from 'react-feather'
+import { Grid, Text } from '@theme-ui/components'
+import Artwork from './artwork'
 
 const getMonth = i => {
   let dt = new Date(`2019-${i.toString().length === 1 ? `0` : ''}${i}`)
@@ -7,22 +7,7 @@ const getMonth = i => {
   return dt.toLocaleString('default', { month: 'long' })
 }
 
-const PlayButton = props => (
-  <IconButton
-    sx={{
-      color: 'white',
-      position: 'absolute',
-      top: '25%',
-      left: '25%',
-      transform: 'translate(-50%)',
-      transform: 'scale(0)',
-      transition: 'transform 0.125s ease-in-out'
-    }}
-    {...props}
-  >
-    <PlayCircle size={24} />
-  </IconButton>
-)
+const getAlbum = a => (a.includes(' - Single') ? 'Single' : a)
 
 export default ({ songs = [], monthly = false, onPlay }) => (
   <Grid
@@ -56,23 +41,17 @@ export default ({ songs = [], monthly = false, onPlay }) => (
         >
           {monthly ? getMonth(i + 1).slice(0, 3) : `${i + 1}.`}
         </Text>
-        <Box sx={{ cursor: 'pointer', position: 'relative', lineHeight: 0 }}>
-          <Image
-            src={song.artwork.replace('512x512', '128x128')}
-            loading="lazy"
-            width={64}
-            alt={`${song.album} artwork`}
-            sx={{ borderRadius: 'small' }}
-          />
-          <PlayButton />
-        </Box>
+        <Artwork
+          size={64}
+          src={song.artwork.replace('512x512', '128x128')}
+          alt={getAlbum(song.album)}
+        />
         <div>
           <Text as="strong" sx={{ display: 'block' }}>
             {song.title}
           </Text>
           <Text as="small" variant="caption">
-            {song.artist} –{' '}
-            {song.album.includes(' - Single') ? 'Single' : song.album}
+            {song.artist} – {getAlbum(song.album)}
           </Text>
         </div>
       </Grid>

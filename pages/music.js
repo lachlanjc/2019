@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useColorMode } from 'theme-ui'
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
+import { Artist, Album } from '../components/music/awards'
 import Meta from '../components/meta'
 import Header from '../components/header'
 import Embed from 'react-song-embed'
-import { Artist, Album } from '../components/music/awards'
 import SongList from '../components/music/song-list'
 
 import topSongs from '../data/top-songs.json'
@@ -30,25 +30,35 @@ export default () => {
             label="Best New Artist"
             name="Conan Gray"
             artwork="https://images.sk-static.com/images/media/img/col6/20190206-182210-650598.jpg"
-          />
+          >
+            Conan is hands-down my favorite artist right now—stand-out
+            songwriting, creative direction, style—& I can’t wait for his album.
+            Seeing him live twice this year (in SF & NYC) was a joy.
+          </Artist>
           <Album
             label="Album of the Year"
             name="Narrated for You"
             artist="Alec Benjamin"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/c2/66/5e/c2665ec4-d57c-a539-5133-22ee864ca6cb/source/1024x1024bb.png"
-          />
+          >
+            Write things
+          </Album>
           <Album
             label="EP of the Year"
             name="Crystalline"
             artist="Bülow"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/e2/1c/ac/e21cacac-ff21-2f31-a92d-9f43dda6cbf6/source/1024x1024bb.png"
-          />
+          >
+            I’m super excited to see what Bülow does next.
+          </Album>
           <Album
             label="Single of the Year"
             name="i’m so tired…"
             artist="Lauv & Troye Sivan"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/05/c7/1b/05c71b41-8627-37a3-6fc4-0f1a2272a18c/source/1024x1024bb.png"
-          />
+          >
+            This song isn’t super deep or groundbreaking, but it’s perfect pop.
+          </Album>
         </Grid>
         <Heading as="h2" variant="headline">
           Songs of the months

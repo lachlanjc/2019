@@ -1,4 +1,5 @@
-import { Grid, Box, Image, Avatar, Text } from '@theme-ui/components'
+import { Grid, Box, Avatar, Text } from '@theme-ui/components'
+import Artwork from './artwork'
 
 const Label = props => (
   <Text
@@ -8,38 +9,87 @@ const Label = props => (
   />
 )
 
-const Name = props => (
+const Name = ({ fontSize = [2, 3, 4, 5], ...props }) => (
   <Text
     as="strong"
-    sx={{ fontSize: [2, 3, 4], display: 'block', lineHeight: 'heading', my: 1 }}
+    sx={{
+      fontSize,
+      display: 'block',
+      lineHeight: 'heading',
+      my: 1
+    }}
     {...props}
   />
 )
 
-export const Artist = ({ label, name, artwork }) => (
-  <Grid gap={4} sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}>
-    <Avatar src={artwork} width={128} alt={name} />
-    <Box>
-      <Label>{label}</Label>
-      <Name>{name}</Name>
-    </Box>
-  </Grid>
+const Comment = props => (
+  <Text
+    sx={{
+      color: 'secondary',
+      fontSize: 1
+    }}
+    {...props}
+  />
 )
 
-export const Album = ({ label, name, artwork, artist }) => (
-  <Grid gap={4} sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}>
-    <Image
+export const Artist = ({ label, name, artwork, children }) => (
+  <Box>
+    <Grid
+      gap={4}
+      sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center', mb: 3 }}
+    >
+      <Avatar src={artwork} width={128} alt={name} />
+      <Box>
+        <Label>{label}</Label>
+        <Name>{name}</Name>
+      </Box>
+    </Grid>
+    <Comment>{children}</Comment>
+  </Box>
+)
+
+export const Album = ({ label, name, artwork, artist, children, ...props }) => (
+  <Box>
+    <Grid
+      gap={4}
+      sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center', mb: 3 }}
+    >
+      <Artwork
+        src={artwork.replace('1024x1024', '256x256')}
+        alt={name}
+        size={256}
+        {...props}
+      />
+      <Box>
+        <Label>{label}</Label>
+        <Name>{name}</Name>
+        <Text
+          as="span"
+          variant="caption"
+          sx={{ fontSize: [1, 2], color: 'muted' }}
+        >
+          {artist}
+        </Text>
+      </Box>
+    </Grid>
+    <Comment>{children}</Comment>
+  </Box>
+)
+
+export const CD = ({ label, name, artwork, artist, children, ...props }) => (
+  <Box>
+    <Artwork
       src={artwork.replace('1024x1024', '256x256')}
-      width={256}
       alt={name}
-      sx={{ borderRadius: 'default' }}
+      size={256}
+      {...props}
     />
-    <div>
-      <Label>{label}</Label>
-      <Name>{name}</Name>
-      <Text as="span" variant="caption" sx={{ color: 'muted' }}>
+    <Box sx={{ mt: 2 }}>
+      <Name fontSize={[2, 3]}>{name}</Name>
+      <Text as="span" variant="caption" sx={{ fontSize: 1, color: 'muted' }}>
         {artist}
       </Text>
-    </div>
-  </Grid>
+    </Box>
+    <Comment>{children}</Comment>
+  </Box>
 )
