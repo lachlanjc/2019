@@ -10,7 +10,7 @@ export default () => (
       title="Activity"
       description="Lachlan Campbell’s activity, productivity, health, & travel of 2019."
     />
-    <Header bg="accent">Activity</Header>
+    <Header bg="primary">Activity</Header>
     <Container
       sx={{ text: { fill: 'currentColor !important', opacity: 0.75 } }}
     >

@@ -18,7 +18,6 @@ const NavButton = ({ sx, ...props }) => (
       transition: 'box-shadow .125s ease-in-out',
       ':hover,:focus': {
         boxShadow: '0 0 0 2px',
-        color: 'primary',
         outline: 'none'
       },
       ...sx
@@ -62,7 +61,7 @@ export default () => {
             display: 'flex',
             alignItems: 'center',
             fontSize: 1,
-            color: 'text',
+            color: 'white',
             textDecoration: 'none',
             mr: [3, 4],
             ':focus,:hover': { color: 'accent' }
@@ -91,11 +90,11 @@ export default () => {
             </NavLink>
           </Flex>
         </Link>
-        <Link href="/music" passHref>
-          <NavLink as="a">Music</NavLink>
-        </Link>
         <Link href="/activity" passHref>
           <NavLink as="a">Activity</NavLink>
+        </Link>
+        <Link href="/music" passHref>
+          <NavLink as="a">Music</NavLink>
         </Link>
         <NavButton as="a" href="https://github.com/lachlanjc/2019">
           <GitHub size={24} />
