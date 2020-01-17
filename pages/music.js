@@ -1,6 +1,9 @@
+import { useState } from 'react'
+import { useColorMode } from 'theme-ui'
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import { Artist, Album } from '../components/music'
 import Meta from '../components/meta'
+import Embed from 'react-song-embed'
 import SongList from '../components/song-list'
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
@@ -9,6 +12,9 @@ import monthlySongs from '../data/monthly-songs.json'
 // import fallSongs from '../data/fall-songs.json'
 
 export default () => {
+  const [colorMode] = useColorMode()
+  const [url, setUrl] = useState(null)
+
   return (
     <Box as="main" sx={{ color: 'text' }}>
       <Meta title="Music" description="Lachlan Campbell’s top music of 2019." />
@@ -70,13 +76,42 @@ export default () => {
           Songs of the months
         </Heading>
       </Container>
-      <SongList songs={monthlySongs} monthly />
+      <SongList songs={monthlySongs} monthly onPlay={setUrl} />
       <Container sx={{ pt: [3, 4, 5], pb: [2, 3] }}>
         <Heading as="h2" variant="headline">
           Top 100 songs
         </Heading>
       </Container>
-      <SongList songs={topSongs} />
+      <SongList songs={topSongs} onPlay={setUrl} />
+      <Box
+        sx={{
+          bg: 'elevated',
+          borderRadius: 'extra',
+          boxShadow: 'elevated',
+          width: '100%',
+          maxWidth: 384,
+          height: 256,
+          position: 'fixed',
+          bottom: 3,
+          left: 3,
+          right: 3,
+          zIndex: 3,
+          overflow: 'hidden',
+          transition: 'transform 0.25s ease-in-out'
+        }}
+        style={{
+          transform: url ? 'translateY(0)' : 'translateY(200%)'
+        }}
+      >
+        {url && (
+          <Embed
+            url={url}
+            dark={colorMode === 'dark'}
+            height={256}
+            key="player"
+          />
+        )}
+      </Box>
     </Box>
   )
 }
