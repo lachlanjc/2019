@@ -1,11 +1,6 @@
 import { Grid, Text } from '@theme-ui/components'
+import { getMonth } from '../util'
 import Artwork from './artwork'
-
-const getMonth = i => {
-  let dt = new Date(`2019-${i.toString().length === 1 ? `0` : ''}${i}`)
-  dt.setDate(dt.getDate() + 1)
-  return dt.toLocaleString('default', { month: 'long' })
-}
 
 const getAlbum = a => (a.includes(' - Single') ? 'Single' : a)
 

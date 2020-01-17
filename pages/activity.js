@@ -3,7 +3,6 @@ import Meta from '../components/meta'
 import Header from '../components/header'
 import Rings from '../components/activity/rings'
 import GitHub from 'react-github-calendar'
-import activity from '../data/rings.json'
 
 export default () => (
   <Box as="main" sx={{ color: 'text' }}>
@@ -21,20 +20,6 @@ export default () => (
         Activity rings
       </Heading>
     </Container>
-    <Container variant="wide">
-      <Grid
-        as="ol"
-        gap={3}
-        columns={[2, 5, 7]}
-        sx={{ listStyle: 'none', p: 0 }}
-      >
-        {Object.keys(activity).map(date => (
-          <Grid as="li" key={date} gap={2} sx={{ placeItems: 'center' }}>
-            <Rings {...activity[date]} />
-            <span>{[date.split('-')[1], date.split('-')[2]].join('/')}</span>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+    <Rings />
   </Box>
 )
