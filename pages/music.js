@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useColorMode } from 'theme-ui'
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
-import { Artist, Album } from '../components/music'
 import Meta from '../components/meta'
 import Embed from 'react-song-embed'
-import SongList from '../components/song-list'
+import { Artist, Album } from '../components/music/awards'
+import SongList from '../components/music/song-list'
+
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
 // import springSongs from '../data/spring-songs.json'
@@ -40,7 +41,7 @@ export default () => {
             }
           }}
         >
-          2019 <span>in Music</span>
+          <span>2019:</span> Music
         </Heading>
       </Box>
       <Container variant="wide" sx={{ pt: [4, 5] }}>
