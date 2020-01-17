@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { useColorMode } from 'theme-ui'
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import { Artist, Album } from '../components/music/awards'
 import Meta from '../components/meta'
 import Header from '../components/header'
-import Embed from 'react-song-embed'
 import SongList from '../components/music/song-list'
+import Player from '../components/music/player'
 
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
@@ -17,7 +16,6 @@ import { capitalize } from 'lodash'
 const seasons = { spring: springSongs, summer: summerSongs, fall: fallSongs }
 
 export default () => {
-  const [colorMode] = useColorMode()
   const [url, setUrl] = useState(null)
 
   return (
@@ -84,35 +82,7 @@ export default () => {
         </Heading>
       </Container>
       <SongList songs={topSongs} onPlay={setUrl} />
-      <Box
-        sx={{
-          bg: 'elevated',
-          borderRadius: 'extra',
-          boxShadow: 'elevated',
-          width: '100%',
-          maxWidth: 384,
-          height: 256,
-          position: 'fixed',
-          bottom: 3,
-          left: 3,
-          right: 3,
-          zIndex: 3,
-          overflow: 'hidden',
-          transition: 'transform 0.25s ease-in-out'
-        }}
-        style={{
-          transform: url ? 'translateY(0)' : 'translateY(200%)'
-        }}
-      >
-        {url && (
-          <Embed
-            url={url}
-            dark={colorMode === 'dark'}
-            height={256}
-            key="player"
-          />
-        )}
-      </Box>
+      <Player url={url} onClose={e => setUrl(null)} />
     </Box>
   )
 }
