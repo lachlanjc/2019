@@ -1,15 +1,27 @@
 import { Grid, Box, Image, Avatar, Text } from '@theme-ui/components'
 
+const Label = props => (
+  <Text
+    as="span"
+    sx={{ color: 'accent', textTransform: 'uppercase' }}
+    {...props}
+  />
+)
+
+const Name = props => (
+  <Text
+    as="strong"
+    sx={{ fontSize: [2, 3, 4], display: 'block', lineHeight: 'heading', my: 1 }}
+    {...props}
+  />
+)
+
 export const Artist = ({ label, name, artwork }) => (
   <Grid gap={4} sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center' }}>
     <Avatar src={artwork} width={128} alt={name} />
     <Box>
-      <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
-        {label}
-      </Text>
-      <Text as="strong" sx={{ fontSize: [2, 3, 4], display: 'block' }}>
-        {name}
-      </Text>
+      <Label>{label}</Label>
+      <Name>{name}</Name>
     </Box>
   </Grid>
 )
@@ -23,12 +35,8 @@ export const Album = ({ label, name, artwork, artist }) => (
       sx={{ borderRadius: 'default' }}
     />
     <div>
-      <Text as="span" sx={{ color: 'accent', textTransform: 'uppercase' }}>
-        {label}
-      </Text>
-      <Text as="strong" sx={{ fontSize: [2, 3, 4], display: 'block' }}>
-        {name}
-      </Text>
+      <Label>{label}</Label>
+      <Name>{name}</Name>
       <Text as="span" variant="caption" sx={{ color: 'muted' }}>
         {artist}
       </Text>
