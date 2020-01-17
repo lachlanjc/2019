@@ -11,12 +11,14 @@ export default () => (
       description="Lachlan Campbell’s activity, productivity, health, & travel of 2019."
     />
     <Header bg="accent">Activity</Header>
-    <Container>
+    <Container
+      sx={{ text: { fill: 'currentColor !important', opacity: 0.75 } }}
+    >
       <Heading as="h2" variant="headline">
         GitHub
       </Heading>
       <GitHub username="lachlanjc" years={[2019]} fullYear={false} />
-      <Heading as="h2" variant="headline">
+      <Heading as="h2" variant="headline" sx={{ mt: [4, 5] }}>
         Activity rings
       </Heading>
     </Container>
