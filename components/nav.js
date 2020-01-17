@@ -7,7 +7,6 @@ import {
   Flex,
   NavLink
 } from '@theme-ui/components'
-import styled from '@emotion/styled'
 import Link from 'next/link'
 import { Plus, Moon, GitHub } from 'react-feather'
 
@@ -15,11 +14,11 @@ const NavButton = ({ sx, ...props }) => (
   <IconButton
     {...props}
     sx={{
-      color: 'alt',
       borderRadius: 'circle',
       transition: 'box-shadow .125s ease-in-out',
       ':hover,:focus': {
         boxShadow: '0 0 0 2px',
+        color: 'primary',
         outline: 'none'
       },
       ...sx
@@ -33,50 +32,27 @@ const ColorSwitcher = props => {
     <NavButton
       {...props}
       onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-      title="Cycle Color Mode"
+      title="Invert color scheme"
     >
       <Moon size={24} />
     </NavButton>
   )
 }
 
-const Material = styled(Box)`
-  ${props =>
-    props.colorMode === 'dark'
-      ? `
-        background-color: rgba(0, 0, 0, 0.875);
-        @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-          background-color: rgba(0, 0, 0, 0.75);
-          -webkit-backdrop-filter: saturate(180%) blur(12px);
-        }
-        `
-      : `
-          background-color: rgba(255, 255, 255, 0.98);
-          @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-            background-color: rgba(255, 255, 255, 0.75);
-            -webkit-backdrop-filter: saturate(180%) blur(16px);
-          }
-        `};
-  @media (prefers-reduced-transparency: reduce) {
-    -webkit-backdrop-filter: auto !important;
-  }
-`
-
 export default () => {
   const [mode] = useColorMode()
   return (
-    <Material
+    <Box
       as="nav"
       colorMode={mode}
       sx={{
-        color: 'nav',
+        color: 'white',
         py: 3,
         top: 0,
         left: 0,
         right: 0,
         position: 'absolute'
       }}
-      key="nav"
     >
       <Container
         sx={{
@@ -100,10 +76,7 @@ export default () => {
               alignItems: 'center',
               mr: 'auto !important',
               ':hover img,:focus img': {
-                transition: 'box-shadow .125s ease-in-out',
-                ':hover,:focus': {
-                  boxShadow: '0 0 0 2px'
-                }
+                boxShadow: '0 0 0 2px'
               }
             }}
           >
@@ -111,9 +84,11 @@ export default () => {
               size={36}
               src="https://github.com/lachlanjc.png"
               alt="Avatar"
-              sx={{ mr: 2 }}
+              sx={{ mr: 2, transition: 'box-shadow .125s ease-in-out' }}
             />
-            <NavLink>Year in Review</NavLink>
+            <NavLink as="span" sx={{ color: 'inherit !important' }}>
+              2019 in Review
+            </NavLink>
           </Flex>
         </Link>
         <Link href="/music" passHref>
@@ -124,6 +99,6 @@ export default () => {
         </NavButton>
         <ColorSwitcher />
       </Container>
-    </Material>
+    </Box>
   )
 }
