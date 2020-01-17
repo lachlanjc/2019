@@ -8,7 +8,7 @@ import {
   NavLink
 } from '@theme-ui/components'
 import Link from 'next/link'
-import { Plus, Moon, GitHub } from 'react-feather'
+import { Moon, GitHub } from 'react-feather'
 
 const NavButton = ({ sx, ...props }) => (
   <IconButton
@@ -93,6 +93,9 @@ export default () => {
         </Link>
         <Link href="/music" passHref>
           <NavLink as="a">Music</NavLink>
+        </Link>
+        <Link href="/activity" passHref>
+          <NavLink as="a">Activity</NavLink>
         </Link>
         <NavButton as="a" href="https://github.com/lachlanjc/2019">
           <GitHub size={24} />
