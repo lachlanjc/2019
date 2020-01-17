@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useColorMode } from 'theme-ui'
 import { Box, Container, Heading, Grid } from '@theme-ui/components'
 import Meta from '../components/meta'
+import Header from '../components/header'
 import Embed from 'react-song-embed'
 import { Artist, Album } from '../components/music/awards'
 import SongList from '../components/music/song-list'
@@ -19,32 +20,8 @@ export default () => {
   return (
     <Box as="main" sx={{ color: 'text' }}>
       <Meta title="Music" description="Lachlan Campbell’s top music of 2019." />
-      <Box
-        as="header"
-        sx={{
-          pt: 6,
-          pb: 5,
-          px: 3,
-          bg: '#ff365d',
-          color: 'textInverse'
-        }}
-      >
-        <Heading
-          as="h1"
-          sx={{
-            fontSize: [5, 6],
-            textAlign: 'center',
-            span: {
-              WebkitTextStroke: 'currentColor',
-              WebkitTextStrokeWidth: '2px',
-              WebkitTextFillColor: 'transparent'
-            }
-          }}
-        >
-          <span>2019:</span> Music
-        </Heading>
-      </Box>
-      <Container variant="wide" sx={{ pt: [4, 5] }}>
+      <Header bg="#ff365d">Music</Header>
+      <Container variant="wide">
         <Heading as="h2" variant="headline">
           Awards
         </Heading>
