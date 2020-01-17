@@ -9,9 +9,12 @@ import SongList from '../components/music/song-list'
 
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
-// import springSongs from '../data/spring-songs.json'
-// import summerSongs from '../data/summer-songs.json'
-// import fallSongs from '../data/fall-songs.json'
+import springSongs from '../data/spring-songs.json'
+import summerSongs from '../data/summer-songs.json'
+import fallSongs from '../data/fall-songs.json'
+import { capitalize } from 'lodash'
+
+const seasons = { spring: springSongs, summer: summerSongs, fall: fallSongs }
 
 export default () => {
   const [colorMode] = useColorMode()
@@ -65,6 +68,16 @@ export default () => {
         </Heading>
       </Container>
       <SongList songs={monthlySongs} monthly onPlay={setUrl} />
+      <Grid columns={[null, null, 3]} sx={{ pt: [3, 4, 5], pb: [2, 3], px: 3 }}>
+        {Object.keys(seasons).map(season => (
+          <div key={season} id={season}>
+            <Heading as="h3" variant="subheadline" sx={{ pl: [42, 48] }}>
+              {capitalize(season)}
+            </Heading>
+            <SongList songs={seasons[season]} onPlay={setUrl} sx={{}} />
+          </div>
+        ))}
+      </Grid>
       <Container sx={{ pt: [3, 4, 5], pb: [2, 3] }}>
         <Heading as="h2" variant="headline">
           Top 100 songs

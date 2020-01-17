@@ -144,6 +144,14 @@ const theme = merge(base, {
       mt: 0,
       mb: [3, 4]
     },
+    subheadline: {
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      letterSpacing: 'headline',
+      fontSize: [2, 3],
+      mt: 0,
+      mb: 2
+    },
     caption: {
       color: 'muted',
       fontFamily: 'accent',

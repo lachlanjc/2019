@@ -4,20 +4,21 @@ import Artwork from './artwork'
 
 const getAlbum = a => (a.includes(' - Single') ? 'Single' : a)
 
-export default ({ songs = [], monthly = false, onPlay }) => (
+export default ({ songs = [], monthly = false, sx = { px: 3 }, onPlay }) => (
   <Grid
     as="ol"
     gap={0}
     sx={{
       gridTemplateColumns: 'repeat(auto-fill, minmax(384px, 1fr))',
       lineHeight: 'subheading',
-      px: 3
+      pl: 0,
+      ...sx
     }}
   >
     {songs.map((song, i) => (
       <Grid
         as="li"
-        gap={3}
+        gap={[2, 3]}
         sx={{
           p: [1, 2],
           overflow: 'hidden',
@@ -34,7 +35,7 @@ export default ({ songs = [], monthly = false, onPlay }) => (
           as="span"
           sx={{ textTransform: 'uppercase', fontSize: monthly ? 0 : 1 }}
         >
-          {monthly ? getMonth(i + 1).slice(0, 3) : `${i + 1}.`}
+          {monthly ? getMonth(i).slice(0, 3) : `${i + 1}.`}
         </Text>
         <Artwork
           size={64}
