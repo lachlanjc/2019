@@ -66,10 +66,13 @@ export default () => {
         </Heading>
       </Container>
       <SongList songs={monthlySongs} monthly onPlay={setUrl} />
-      <Grid columns={[null, null, 3]} sx={{ pt: [3, 4, 5], pb: [2, 3], px: 3 }}>
+      <Heading as="h2" variant="headline" sx={{ mt: [4, 5], mb: [3, 4] }}>
+        Seasonal playlists
+      </Heading>
+      <Grid columns={[null, null, 3]} sx={{ p: 3 }}>
         {Object.keys(seasons).map(season => (
           <div key={season} id={season}>
-            <Heading as="h3" variant="subheadline" sx={{ pl: [42, 48] }}>
+            <Heading as="h3" variant="subheadline" sx={{ pl: [36, 48] }}>
               {capitalize(season)}
             </Heading>
             <SongList songs={seasons[season]} onPlay={setUrl} sx={{}} />
