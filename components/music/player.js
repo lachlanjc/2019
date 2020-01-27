@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box } from '@theme-ui/components'
+import { Box } from 'theme-ui'
 import { useColorMode } from 'theme-ui'
 import Embed from 'react-song-embed'
 

@@ -1,4 +1,4 @@
-import { Grid, Box, Avatar, Text } from '@theme-ui/components'
+import { Grid, Box, Avatar, Text } from 'theme-ui'
 import Artwork from './artwork'
 
 const Label = props => (

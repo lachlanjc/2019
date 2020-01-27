@@ -1,4 +1,4 @@
-import { Container, Grid, Heading, Flex, Box } from '@theme-ui/components'
+import { Container, Grid, Heading, Flex, Box } from 'theme-ui'
 import Rings from './ring'
 import { padMonth, getMonth } from '../util'
 import { times, keys, filter, startsWith } from 'lodash'

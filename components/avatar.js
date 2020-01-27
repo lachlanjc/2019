@@ -1,4 +1,4 @@
-import { Image } from '@theme-ui/components'
+import { Image } from 'theme-ui'
 
 export default ({ size = 32, ...props }) => (
   <Image

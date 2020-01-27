@@ -1,4 +1,4 @@
-import { Box, Heading } from '@theme-ui/components'
+import { Box, Heading } from 'theme-ui'
 
 export default ({ bg = 'text', color = 'textInverse', sx = {}, children }) => (
   <Box

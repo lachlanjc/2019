@@ -1,12 +1,5 @@
 import { useColorMode } from 'theme-ui'
-import {
-  Avatar,
-  Box,
-  Container,
-  IconButton,
-  Flex,
-  NavLink
-} from '@theme-ui/components'
+import { Avatar, Box, Container, IconButton, Flex, NavLink } from 'theme-ui'
 import Link from 'next/link'
 import { Moon, GitHub } from 'react-feather'
 

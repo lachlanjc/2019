@@ -1,4 +1,4 @@
-import { Box, Image, IconButton } from '@theme-ui/components'
+import { Box, Image, IconButton } from 'theme-ui'
 import { PlayCircle } from 'react-feather'
 
 const PlayButton = props => (

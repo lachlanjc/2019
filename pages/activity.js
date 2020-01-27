@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text, Flex, Grid } from '@theme-ui/components'
+import { Box, Container, Heading, Text, Flex, Grid } from 'theme-ui'
 import Meta from '../components/meta'
 import Header from '../components/header'
 import Rings from '../components/activity/rings'

@@ -1,12 +1,8 @@
-import { base } from '@theme-ui/presets'
-import { merge } from 'lodash'
-
-export const breakpoints = [32, 48, 64, 96, 128].map(w => `${w}em`)
-
-export const palette = {
+export const colors = {
   darker: '#121217',
   dark: '#17171d',
   darkless: '#252429',
+
   black: '#1f2d3d',
   steel: '#273444',
   slate: '#3c4858',
@@ -22,67 +18,51 @@ export const palette = {
   cyan: '#5bc0de',
   blue: '#338eda',
 
-  primary: '#007a87',
-  primaryWash: '#bfe6ea',
-  primaryWashLight: '#dffbfd',
-  primaryLight: '#009aab',
-  primaryDark: '#004f58',
-  alt: '#ff5a5f',
-  altLight: '#ff7e82',
-  altDark: '#e00007',
-  success: '#3fb34f',
-  error: '#b23f42',
-  warm: '#ffb400',
-  warmWash: '#ffdc89',
-  cool: '#00bdde',
-  coolWash: '#7cecff'
+  twitter: '#1da1f2',
+  facebook: '#3b5998',
+  instagram: '#e1306c'
 }
 
-const theme = merge(base, {
-  breakpoints,
+export default {
+  breakpoints: [32, 48, 64, 96, 128].map(w => `${w}em`),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 16, 20, 24, 32, 48, 64, 96, 128],
-  initialColorMode: 'light',
+  initialColorModeName: 'light',
   useColorSchemeMediaQuery: true,
   colors: {
-    ...palette,
-    text: palette.black,
-    background: palette.white,
-    elevated: palette.white,
-    sunken: palette.smoke,
-    border: palette.smoke,
-    placeholder: palette.muted,
-    muted: palette.muted,
-    secondary: palette.slate,
-    primary: palette.primary,
-    accent: palette.alt,
-    textInverse: palette.white,
-    header: palette.snow,
-    nav: palette.white,
+    ...colors,
+    text: colors.black,
+    background: colors.white,
+    elevated: colors.white,
+    sunken: colors.smoke,
+    border: colors.smoke,
+    placeholder: colors.muted,
+    secondary: colors.slate,
+    primary: colors.blue,
+    muted: colors.muted,
+    accent: colors.orange,
     modes: {
       dark: {
-        text: palette.white,
-        background: palette.dark,
-        elevated: palette.darkless,
-        sunken: palette.darker,
-        border: palette.darkless,
-        placeholder: palette.slate,
-        secondary: palette.muted,
-        // muted: palette.muted,
-        primary: palette.primaryLight,
-        // accent: palette.altDark,
-        textInverse: palette.dark,
-        header: palette.darkless,
-        nav: palette.primary
+        text: colors.white,
+        background: colors.dark,
+        elevated: colors.darkless,
+        sunken: colors.darker,
+        border: colors.darkless,
+        placeholder: colors.slate,
+        secondary: colors.muted,
+        muted: colors.muted,
+        accent: colors.cyan
       }
     }
   },
   fonts: {
+    heading:
+      '"Roobert", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     body:
-      'Roobert, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      '"Roobert", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     accent:
       '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-    mono: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
+    monospace: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
   },
   lineHeights: {
     title: 1,
@@ -92,22 +72,24 @@ const theme = merge(base, {
   },
   fontWeights: {
     body: 400,
-    bold: 700
+    bold: 700,
+    heading: 700
   },
   letterSpacings: {
     title: '-0.009em',
     headline: '0.009em'
   },
   sizes: {
-    superultrawide: 2048,
-    ultrawide: 1536,
-    wide: 1200,
-    containerplus: 1024,
-    container: 768,
+    widePlus: 2048,
+    wide: 1536,
+    layoutPlus: 1200,
+    layout: 1024,
+    copyPlus: 768,
+    copy: 680,
+    narrowPlus: 600,
     narrow: 512
   },
   radii: {
-    small: 3,
     default: 6,
     extra: 9,
     circle: 99999
@@ -115,7 +97,7 @@ const theme = merge(base, {
   shadows: {
     small: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 2px 4px rgba(0, 0, 0, 0.0625)',
     card: '0 4px 8px rgba(0, 0, 0, 0.125)',
-    elevated: '0 1px 2px rgba(0, 0, 0, 0.125), 0 8px 12px rgba(0, 0, 0, 0.25)'
+    elevated: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 8px 12px rgba(0, 0, 0, 0.125)'
   },
   text: {
     heading: {
@@ -162,6 +144,13 @@ const theme = merge(base, {
       fontFamily: 'accent'
     }
   },
+  alerts: {
+    primary: {
+      color: 'background',
+      bg: 'orange',
+      fontWeight: 'body'
+    }
+  },
   badges: {
     pill: {
       borderRadius: 'circle'
@@ -172,24 +161,22 @@ const theme = merge(base, {
       bg: 'primary',
       color: 'background',
       cursor: 'pointer',
-      fontFamily: 'body',
+      fontFamily: 'inherit',
       fontWeight: 'bold',
       svg: { ml: -1, mr: 2 }
     },
-    inverted: {
-      bg: 'invertedPrimary',
-      color: 'invertedText',
-      cursor: 'pointer',
-      fontFamily: 'body',
-      fontWeight: 'bold',
-      svg: { ml: -1, mr: 2 }
+    outline: {
+      variant: 'buttons.primary',
+      bg: 'transparent',
+      color: 'primary',
+      border: '2px solid currentColor'
     }
   },
   forms: {
     input: {
       bg: 'elevated',
       color: 'text',
-      fontFamily: 'body',
+      fontFamily: 'inherit',
       borderRadius: 'base',
       boxShadow: 'small',
       transition: 'box-shadow .125s ease-in-out',
@@ -227,73 +214,55 @@ const theme = merge(base, {
       p: [3, 4],
       borderRadius: 'extra',
       'input, a': { bg: 'header', boxShadow: 'none !important' }
-    },
-    nav: {
-      bg: 'elevated',
-      color: 'text',
-      px: 3,
-      py: 4,
-      borderRadius: 'extra',
-      boxShadow: 'card',
-      textDecoration: 'none',
-      position: 'relative',
-      overflow: 'hidden',
-      fontSize: 2,
-      fontWeight: 'bold',
-      lineHeight: 'title',
-      WebkitTapHighlightColor: 'transparent',
-      transition: 'transform .125s ease-in-out, box-shadow .125s ease-in-out',
-      ':hover,:focus': {
-        transform: 'scale(1.0625)',
-        boxShadow: 'elevated'
-      }
     }
   },
   layout: {
     container: {
+      maxWidth: ['copyPlus', null, 'layout', null, 'layoutPlus'],
       width: '100%',
-      maxWidth: ['container', null, null, null, 'wide'],
       mx: 'auto',
       px: 3
     },
     wide: {
-      width: '100%',
-      maxWidth: ['wide', null, null, null, 'ultrawide'],
-      mx: 'auto',
-      px: 3
+      variant: 'layout.container',
+      maxWidth: ['wide', null, null, null, 'widePlus']
     },
     copy: {
-      width: '100%',
-      maxWidth: ['narrowplus', null, null, null, 'container'],
-      mx: 'auto',
-      color: 'text'
+      variant: 'layout.container',
+      maxWidth: ['copy', null, null, null, 'copyPlus']
     },
     narrow: {
-      width: '100%',
-      maxWidth: ['narrow', null, null, null, 'container'],
-      mx: 'auto',
-      px: 3
+      variant: 'layout.container',
+      maxWidth: ['narrow', null, 'narrowPlus', null, 'layout']
     }
   },
   styles: {
+    root: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+      color: 'text',
+      margin: 0,
+      minHeight: '100vh'
+    },
+    p: {
+      color: 'text',
+      fontWeight: 'body',
+      lineHeight: 'body'
+    },
     a: {
       color: 'primary'
+    },
+    code: {
+      fontFamily: 'monospace',
+      fontSize: 'inherit'
+    },
+    img: {
+      maxWidth: '100%'
     },
     hr: {
       borderColor: 'border',
       my: [3, 4]
     }
   }
-})
-theme.styles.root = {
-  fontFamily: theme.fonts.body,
-  lineHeight: theme.lineHeights.body,
-  fontWeight: theme.fontWeights.body,
-  color: 'text',
-  margin: 0,
-  minHeight: '100vh',
-  display: 'flex',
-  flexDirection: 'column'
 }
-
-export default theme

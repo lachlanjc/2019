@@ -1,4 +1,4 @@
-import { Grid, Text } from '@theme-ui/components'
+import { Grid, Text } from 'theme-ui'
 import { getMonth } from '../util'
 import Artwork from './artwork'
 
