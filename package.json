@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@emotion/styled": "^10.0.27",
-    "@theme-ui/preset-base": "^0.3.0",
+    "@hackclub/theme": "^0.1.0-alpha.0",
     "@zeit/next-mdx": "^1.2.0",
     "load-json-file": "^6.2.0",
     "lodash": "^4.17.15",

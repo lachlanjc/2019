@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Container, Heading, Grid } from '@theme-ui/components'
+import { Box, Container, Heading, Grid } from 'theme-ui'
 import { Artist, Album } from '../components/music/awards'
 import Meta from '../components/meta'
 import Header from '../components/header'

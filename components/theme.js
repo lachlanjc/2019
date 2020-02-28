@@ -1,7 +1,5 @@
-import base from '@theme-ui/preset-base'
+import base from '@hackclub/theme'
 import { merge } from 'lodash'
-
-export const breakpoints = [32, 48, 64, 96, 128].map(w => `${w}em`)
 
 export const palette = {
   darker: '#121217',
@@ -38,12 +36,8 @@ export const palette = {
   coolWash: '#7cecff'
 }
 
-const theme = merge(base, {
-  breakpoints,
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-  fontSizes: [12, 16, 20, 24, 32, 48, 64, 96, 128],
-  initialColorModeName: 'light',
-  useColorSchemeMediaQuery: true,
+const theme = {
+  ...base,
   colors: {
     ...palette,
     text: palette.black,
@@ -78,44 +72,23 @@ const theme = merge(base, {
     }
   },
   fonts: {
+    heading:
+      'Roobert, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     body:
       'Roobert, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     accent:
       '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     mono: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
   },
-  lineHeights: {
-    title: 1,
-    heading: 1.125,
-    subheading: 1.25,
-    body: 1.5
-  },
   fontWeights: {
     body: 400,
     bold: 700
-  },
-  letterSpacings: {
-    title: '-0.009em',
-    headline: '0.009em'
-  },
-  sizes: {
-    superultrawide: 2048,
-    ultrawide: 1536,
-    wide: 1200,
-    containerplus: 1024,
-    container: 768,
-    narrow: 512
   },
   radii: {
     small: 3,
     default: 6,
     extra: 9,
     circle: 99999
-  },
-  shadows: {
-    small: '0 1px 2px rgba(0, 0, 0, 0.0625), 0 2px 4px rgba(0, 0, 0, 0.0625)',
-    card: '0 4px 8px rgba(0, 0, 0, 0.125)',
-    elevated: '0 1px 2px rgba(0, 0, 0, 0.125), 0 8px 12px rgba(0, 0, 0, 0.25)'
   },
   text: {
     heading: {
@@ -162,11 +135,6 @@ const theme = merge(base, {
       fontFamily: 'accent'
     }
   },
-  badges: {
-    pill: {
-      borderRadius: 'circle'
-    }
-  },
   buttons: {
     primary: {
       bg: 'primary',
@@ -183,34 +151,6 @@ const theme = merge(base, {
       fontFamily: 'body',
       fontWeight: 'bold',
       svg: { ml: -1, mr: 2 }
-    }
-  },
-  forms: {
-    input: {
-      bg: 'elevated',
-      color: 'text',
-      fontFamily: 'body',
-      borderRadius: 'base',
-      boxShadow: 'small',
-      transition: 'box-shadow .125s ease-in-out',
-      border: 0,
-      ':hover,:focus': { boxShadow: 'card' },
-      '::-webkit-input-placeholder': { color: 'placeholder' },
-      '::-moz-placeholder': { color: 'placeholder' },
-      ':-ms-input-placeholder': { color: 'placeholder' },
-      '&[type="search"]::-webkit-search-decoration': { display: 'none' }
-    },
-    label: {
-      color: 'text',
-      fontWeight: 'medium'
-    },
-    hidden: {
-      position: 'absolute',
-      height: '1px',
-      width: '1px',
-      overflow: 'hidden',
-      clip: 'rect(1px, 1px, 1px, 1px)',
-      whiteSpace: 'nowrap'
     }
   },
   cards: {
@@ -249,51 +189,19 @@ const theme = merge(base, {
       }
     }
   },
-  layout: {
-    container: {
-      width: '100%',
-      maxWidth: ['container', null, null, null, 'wide'],
-      mx: 'auto',
-      px: 3
-    },
-    wide: {
-      width: '100%',
-      maxWidth: ['wide', null, null, null, 'ultrawide'],
-      mx: 'auto',
-      px: 3
-    },
-    copy: {
-      width: '100%',
-      maxWidth: ['narrowplus', null, null, null, 'container'],
-      mx: 'auto',
-      color: 'text'
-    },
-    narrow: {
-      width: '100%',
-      maxWidth: ['narrow', null, null, null, 'container'],
-      mx: 'auto',
-      px: 3
-    }
-  },
-  styles: {
-    a: {
-      color: 'primary'
-    },
+  styles: merge(base.styles, {
     hr: {
-      borderColor: 'border',
-      my: [3, 4]
+      my: [4, 5]
     }
-  }
-})
+  })
+}
 theme.styles.root = {
   fontFamily: theme.fonts.body,
   lineHeight: theme.lineHeights.body,
   fontWeight: theme.fontWeights.body,
   color: 'text',
   margin: 0,
-  minHeight: '100vh',
-  display: 'flex',
-  flexDirection: 'column'
+  minHeight: '100vh'
 }
 
 export default theme
