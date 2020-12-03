@@ -15,7 +15,7 @@ import { capitalize } from 'lodash'
 
 const seasons = { spring: springSongs, summer: summerSongs, fall: fallSongs }
 
-export default () => {
+const MusicPage = () => {
   const [url, setUrl] = useState(null)
 
   return (
@@ -89,3 +89,5 @@ export default () => {
     </Box>
   )
 }
+
+export default MusicPage

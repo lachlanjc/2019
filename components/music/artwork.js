@@ -18,7 +18,7 @@ const PlayButton = props => (
   </IconButton>
 )
 
-export default ({ src, alt, size = 64 }) => (
+const Artwork = ({ src, alt, size = 64 }) => (
   <Box sx={{ cursor: 'pointer', position: 'relative', lineHeight: 0 }}>
     <Image
       src={src}
@@ -30,3 +30,5 @@ export default ({ src, alt, size = 64 }) => (
     <PlayButton />
   </Box>
 )
+
+export default Artwork

@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { Box } from '@theme-ui/components'
-import { useColorMode } from 'theme-ui'
+import { Box, useColorMode } from 'theme-ui'
 import Embed from 'react-song-embed'
 
-export default ({ url, onClose }) => {
+const Player = ({ url, onClose }) => {
   const [colorMode] = useColorMode()
   return (
     <Box
@@ -38,3 +37,5 @@ export default ({ url, onClose }) => {
     </Box>
   )
 }
+
+export default Player

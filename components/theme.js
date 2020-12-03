@@ -1,5 +1,5 @@
 import base from '@hackclub/theme'
-import { merge } from 'lodash'
+import { merge } from 'theme-ui'
 
 export const palette = {
   darker: '#121217',

@@ -1,12 +1,12 @@
-import { useColorMode } from 'theme-ui'
 import {
+  useColorMode,
   Avatar,
   Box,
   Container,
   IconButton,
   Flex,
   NavLink
-} from '@theme-ui/components'
+} from 'theme-ui'
 import Link from 'next/link'
 import { Moon, GitHub } from 'react-feather'
 
@@ -38,7 +38,7 @@ const ColorSwitcher = props => {
   )
 }
 
-export default () => {
+const Nav = () => {
   const [mode] = useColorMode()
   return (
     <Box
@@ -104,3 +104,5 @@ export default () => {
     </Box>
   )
 }
+
+export default Nav

@@ -3,27 +3,27 @@
   "description": "@lachlanjc’s 2019 year in review",
   "version": "1.0.0",
   "private": true,
-  "author": "Lachlan Campbell <lachlan@hackpenn.com>",
+  "author": "Lachlan Campbell <lachlanjc@hey.com>",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.27",
-    "@hackclub/theme": "^0.1.0-alpha.0",
-    "@zeit/next-mdx": "^1.2.0",
+    "@hackclub/theme": "^0.3.1",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.3",
     "load-json-file": "^6.2.0",
-    "lodash": "^4.17.15",
-    "next": "^9.2.2",
+    "lodash": "^4.17.20",
+    "next": "^10.0.3",
     "nprogress": "^0.2.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-feather": "^2.0.3",
-    "react-github-calendar": "^1.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-feather": "^2.0.9",
+    "react-github-calendar": "^2.0.1",
     "react-music-embed": "^1.0.1",
     "react-song-embed": "^1.0.0",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.4"
   },
   "license": "MIT"
 }

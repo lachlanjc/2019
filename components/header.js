@@ -1,6 +1,6 @@
-import { Box, Heading } from '@theme-ui/components'
+import { Box, Heading } from 'theme-ui'
 
-export default ({ bg = 'text', color = 'textInverse', sx = {}, children }) => (
+const Header = ({ bg = 'text', color = 'textInverse', sx = {}, children }) => (
   <Box
     as="header"
     sx={{
@@ -29,3 +29,5 @@ export default ({ bg = 'text', color = 'textInverse', sx = {}, children }) => (
     </Heading>
   </Box>
 )
+
+export default Header
