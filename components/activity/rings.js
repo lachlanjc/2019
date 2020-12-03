@@ -1,5 +1,5 @@
 import { Container, Grid, Heading, Flex, Box } from 'theme-ui'
-import Rings from './ring'
+import Ring from './ring'
 import { padMonth, getMonth } from '../util'
 import { times, keys, filter, startsWith } from 'lodash'
 import activity from '../../data/rings.json'
@@ -47,7 +47,7 @@ const Rings = () => (
                   }
                 }}
               >
-                <Rings size={48} {...activity[date]} />
+                <Ring size={48} {...activity[date]} />
               </Flex>
             )
           )}
