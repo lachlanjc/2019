@@ -41,6 +41,7 @@ export default {
     primary: colors.cyan,
     muted: colors.muted,
     accent: colors.orange,
+    music: '#ff365d',
     modes: {
       dark: {
         text: colors.white,

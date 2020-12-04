@@ -21,7 +21,7 @@ const MusicPage = () => {
   return (
     <Box as="main" sx={{ color: 'text' }}>
       <Meta title="Music" description="Lachlan Campbell’s top music of 2019." />
-      <Header bg="#ff365d">Music</Header>
+      <Header bg="music">Music</Header>
       <Container variant="wide">
         <Heading as="h2" variant="headline">
           Awards
@@ -37,12 +37,19 @@ const MusicPage = () => {
             Seeing him live twice this year (in SF & NYC) was a joy.
           </Artist>
           <Album
-            label="Album of the Year"
-            name="Narrated for You"
-            artist="Alec Benjamin"
-            artwork="https://is5-ssl.mzstatic.com/image/thumb/Music128/v4/c2/66/5e/c2665ec4-d57c-a539-5133-22ee864ca6cb/source/1024x1024bb.png"
+            label="Single of the Year"
+            name="i’m so tired…"
+            artist="Lauv & Troye Sivan"
+            artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/05/c7/1b/05c71b41-8627-37a3-6fc4-0f1a2272a18c/source/1024x1024bb.png"
           >
-            Write things
+            This song isn’t super deep or groundbreaking, but it’s perfect pop.
+          </Album>
+          <Album
+            label="Album of the Year"
+            name="WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?"
+            artist="Billie Eilish"
+            artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/ff/4a/eb/ff4aeb7c-7f2d-1d18-d7cc-51c107c70bad/source/512x512bb.png"
+          >
           </Album>
           <Album
             label="EP of the Year"
@@ -50,15 +57,6 @@ const MusicPage = () => {
             artist="Bülow"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/e2/1c/ac/e21cacac-ff21-2f31-a92d-9f43dda6cbf6/source/1024x1024bb.png"
           >
-            I’m super excited to see what Bülow does next.
-          </Album>
-          <Album
-            label="Single of the Year"
-            name="i’m so tired…"
-            artist="Lauv & Troye Sivan"
-            artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/05/c7/1b/05c71b41-8627-37a3-6fc4-0f1a2272a18c/source/1024x1024bb.png"
-          >
-            This song isn’t super deep or groundbreaking, but it’s perfect pop.
           </Album>
         </Grid>
         <Heading as="h2" variant="headline">

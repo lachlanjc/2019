@@ -1,1 +1,122 @@
-[{"title":"Fresh Laundry","album":"Cape God","artist":"Allie X","artwork":"https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/45\/c2\/b9\/45c2b9ab-e8b7-979c-8e2e-a05117dee27e\/5056167117735_1.jpg\/250x250bb.jpeg","plays":21,"link":"https:\/\/song.link\/us\/i\/1478068219"},{"title":"Lights Up","album":"Fine Line","artist":"Harry Styles","artwork":"https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/72\/89\/85\/728985d1-9484-7b71-1ea8-0f0654f7dc16\/886448022213.jpg\/250x250bb.jpeg","plays":23,"link":"https:\/\/song.link\/us\/i\/1485802971"},{"title":"Purple Hat","album":"DANCING ON THE PEOPLE - EP","artist":"Sofi Tukker","artwork":"https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/c6\/65\/17\/c6651761-c790-9e92-eb4f-1fba41e1a8cb\/0617465006685.png\/250x250bb.jpeg","plays":30,"link":"https:\/\/song.link\/de\/i\/1475338107"},{"title":"Maniac","album":"Maniac - Single","artist":"Conan Gray","artwork":"https:\/\/is2-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/66\/10\/64\/661064e2-4169-7205-15ba-20a75ac569e1\/19UMGIM91956.rgb.jpg\/250x250bb.jpeg","plays":68,"link":"https:\/\/song.link\/us\/i\/1483150083"},{"title":"Regulars","album":"Cape God","artist":"Allie X","artwork":"https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/64\/c1\/0c\/64c10c3e-f4fc-9b98-5ba0-4db1505d3e3c\/5056167119111_1.jpg\/250x250bb.jpeg","plays":24,"link":"https:\/\/song.link\/us\/i\/1482800173"},{"title":"Boots","album":"Boots - Single","artist":"Greyson Chance","artwork":"https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/8b\/7a\/80\/8b7a80b9-fcb3-e28f-b28a-9a98ac7cff36\/886448087090.jpg\/250x250bb.jpeg","plays":23,"link":"https:\/\/song.link\/us\/i\/1484885154"},{"title":"ferrari","album":"balloons don't float here","artist":"Isaac Dunbar","artwork":"https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/bb\/00\/e4\/bb00e4ae-ebb4-3cae-b5f9-167b2a3e4a20\/5060450069250.png\/250x250bb.jpeg","plays":29,"link":"https:\/\/song.link\/in\/i\/1467610444"},{"title":"It Might Be Time","album":"The Slow Rush","artist":"Tame Impala","artwork":"https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/4c\/d9\/c4\/4cd9c4d5-c05d-19e6-6738-860817b52598\/19UMGIM96748.rgb.jpg\/250x250bb.jpeg","plays":86,"link":"https:\/\/song.link\/co\/i\/1484743123"},{"title":"everything i wanted","album":"everything i wanted - Single","artist":"Billie Eilish","artwork":"https:\/\/is3-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/85\/57\/85\/855785ff-6433-a6b5-45e2-ccee55d608dc\/19UM1IM00404.rgb.jpg\/250x250bb.jpeg","plays":59,"link":"https:\/\/song.link\/us\/i\/1487502476"},{"title":"Hallucinations","album":"Hallucinations - EP","artist":"PVRIS","artwork":"https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/56\/cc\/b8\/56ccb833-9a98-df5a-1b1c-13267c744503\/093624899297.jpg\/250x250bb.jpeg","plays":15,"link":"https:\/\/song.link\/us\/i\/1482646546"},{"title":"Watermelon Sugar","album":"Fine Line","artist":"Harry Styles","artwork":"https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/72\/89\/85\/728985d1-9484-7b71-1ea8-0f0654f7dc16\/886448022213.jpg\/250x250bb.jpeg","plays":29,"link":"https:\/\/song.link\/us\/i\/1485802967"},{"title":"Feelings","album":"~how i'm feeling~","artist":"Lauv","artwork":"https:\/\/is2-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/a2\/97\/fc\/a297fc05-f994-54e1-0a26-c814ba467dc2\/5056167118077_1.jpg\/250x250bb.jpeg","plays":24,"link":"https:\/\/song.link\/us\/i\/1479070182"},{"title":"suffice","album":"the masquerade","artist":"mxmtoon","artwork":"https:\/\/is5-ssl.mzstatic.com\/image\/thumb\/Music123\/v4\/7c\/ce\/55\/7cce55c7-f8d3-f163-f7da-9d4a6cf762fc\/193483922911.jpg\/250x250bb.jpeg","plays":17,"link":"https:\/\/song.link\/us\/i\/1469937863"},{"title":"Hallelujah","album":"No One Else Can Wear Your Crown (Deluxe)","artist":"Oh Wonder","artwork":"https:\/\/is4-ssl.mzstatic.com\/image\/thumb\/Music113\/v4\/da\/94\/58\/da945871-90e1-42ff-2c7e-a7e1792c26d2\/19UMGIM70810.rgb.jpg\/250x250bb.jpeg","plays":32,"link":"https:\/\/song.link\/us\/i\/1476046881"},{"title":"Just Like Love","album":"No Shape","artist":"Perfume Genius","artwork":"https:\/\/is1-ssl.mzstatic.com\/image\/thumb\/Music125\/v4\/e0\/b8\/e3\/e0b8e3e1-2ac8-ca6a-fb85-39e27d9d114f\/cover.jpg\/250x250bb.jpeg","plays":22,"link":"https:\/\/song.link\/us\/i\/1389453060"}]
+[
+  {
+    "title": "Fresh Laundry",
+    "album": "Cape God",
+    "artist": "Allie X",
+    "artwork": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/45/c2/b9/45c2b9ab-e8b7-979c-8e2e-a05117dee27e/5056167117735_1.jpg/250x250bb.jpeg",
+    "plays": 21,
+    "link": "https://song.link/us/i/1478068219"
+  },
+  {
+    "title": "Lights Up",
+    "album": "Fine Line",
+    "artist": "Harry Styles",
+    "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/72/89/85/728985d1-9484-7b71-1ea8-0f0654f7dc16/886448022213.jpg/250x250bb.jpeg",
+    "plays": 23,
+    "link": "https://song.link/us/i/1485802971"
+  },
+  {
+    "title": "Purple Hat",
+    "album": "DANCING ON THE PEOPLE - EP",
+    "artist": "Sofi Tukker",
+    "artwork": "https://is3-ssl.mzstatic.com/image/thumb/Music113/v4/c6/65/17/c6651761-c790-9e92-eb4f-1fba41e1a8cb/0617465006685.png/250x250bb.jpeg",
+    "plays": 30,
+    "link": "https://song.link/de/i/1475338107"
+  },
+  {
+    "title": "Maniac",
+    "album": "Maniac - Single",
+    "artist": "Conan Gray",
+    "artwork": "https://is2-ssl.mzstatic.com/image/thumb/Music123/v4/66/10/64/661064e2-4169-7205-15ba-20a75ac569e1/19UMGIM91956.rgb.jpg/250x250bb.jpeg",
+    "plays": 68,
+    "link": "https://song.link/us/i/1487234734"
+  },
+  {
+    "title": "Regulars",
+    "album": "Cape God",
+    "artist": "Allie X",
+    "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Music123/v4/64/c1/0c/64c10c3e-f4fc-9b98-5ba0-4db1505d3e3c/5056167119111_1.jpg/250x250bb.jpeg",
+    "plays": 24,
+    "link": "https://song.link/us/i/1482800173"
+  },
+  {
+    "title": "Boots",
+    "album": "Boots - Single",
+    "artist": "Greyson Chance",
+    "artwork": "https://is5-ssl.mzstatic.com/image/thumb/Music113/v4/8b/7a/80/8b7a80b9-fcb3-e28f-b28a-9a98ac7cff36/886448087090.jpg/250x250bb.jpeg",
+    "plays": 23,
+    "link": "https://song.link/us/i/1484885154"
+  },
+  {
+    "title": "ferrari",
+    "album": "balloons don't float here",
+    "artist": "Isaac Dunbar",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/bb/00/e4/bb00e4ae-ebb4-3cae-b5f9-167b2a3e4a20/5060450069250.png/250x250bb.jpeg",
+    "plays": 29,
+    "link": "https://song.link/in/i/1467610444"
+  },
+  {
+    "title": "It Might Be Time",
+    "album": "The Slow Rush",
+    "artist": "Tame Impala",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music123/v4/4c/d9/c4/4cd9c4d5-c05d-19e6-6738-860817b52598/19UMGIM96748.rgb.jpg/250x250bb.jpeg",
+    "plays": 86,
+    "link": "https://song.link/us/i/1497231168"
+  },
+  {
+    "title": "everything i wanted",
+    "album": "everything i wanted - Single",
+    "artist": "Billie Eilish",
+    "artwork": "https://is3-ssl.mzstatic.com/image/thumb/Music123/v4/85/57/85/855785ff-6433-a6b5-45e2-ccee55d608dc/19UM1IM00404.rgb.jpg/250x250bb.jpeg",
+    "plays": 59,
+    "link": "https://song.link/us/i/1487502476"
+  },
+  {
+    "title": "Hallucinations",
+    "album": "Hallucinations - EP",
+    "artist": "PVRIS",
+    "artwork": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/56/cc/b8/56ccb833-9a98-df5a-1b1c-13267c744503/093624899297.jpg/250x250bb.jpeg",
+    "plays": 15,
+    "link": "https://song.link/us/i/1482646546"
+  },
+  {
+    "title": "Watermelon Sugar",
+    "album": "Fine Line",
+    "artist": "Harry Styles",
+    "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/72/89/85/728985d1-9484-7b71-1ea8-0f0654f7dc16/886448022213.jpg/250x250bb.jpeg",
+    "plays": 29,
+    "link": "https://song.link/us/i/1485802967"
+  },
+  {
+    "title": "Feelings",
+    "album": "~how i'm feeling~",
+    "artist": "Lauv",
+    "artwork": "https://is2-ssl.mzstatic.com/image/thumb/Music113/v4/a2/97/fc/a297fc05-f994-54e1-0a26-c814ba467dc2/5056167118077_1.jpg/250x250bb.jpeg",
+    "plays": 24,
+    "link": "https://song.link/us/i/1479070182"
+  },
+  {
+    "title": "suffice",
+    "album": "the masquerade",
+    "artist": "mxmtoon",
+    "artwork": "https://is5-ssl.mzstatic.com/image/thumb/Music123/v4/7c/ce/55/7cce55c7-f8d3-f163-f7da-9d4a6cf762fc/193483922911.jpg/250x250bb.jpeg",
+    "plays": 17,
+    "link": "https://song.link/us/i/1469937863"
+  },
+  {
+    "title": "Hallelujah",
+    "album": "No One Else Can Wear Your Crown (Deluxe)",
+    "artist": "Oh Wonder",
+    "artwork": "https://is4-ssl.mzstatic.com/image/thumb/Music113/v4/da/94/58/da945871-90e1-42ff-2c7e-a7e1792c26d2/19UMGIM70810.rgb.jpg/250x250bb.jpeg",
+    "plays": 32,
+    "link": "https://song.link/us/i/1476046881"
+  },
+  {
+    "title": "Just Like Love",
+    "album": "No Shape",
+    "artist": "Perfume Genius",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/e0/b8/e3/e0b8e3e1-2ac8-ca6a-fb85-39e27d9d114f/cover.jpg/250x250bb.jpeg",
+    "plays": 22,
+    "link": "https://song.link/us/i/1389453060"
+  }
+]

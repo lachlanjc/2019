@@ -9,11 +9,11 @@ const Label = props => (
   />
 )
 
-const Name = ({ fontSize = [2, 3, 4, 5], ...props }) => (
+const Name = ({ fontSize, ...props }) => (
   <Text
     as="strong"
     sx={{
-      fontSize,
+      fontSize: props.children.length > 32 ? [2, 3, 4] : [2, 3, 4, 5],
       display: 'block',
       lineHeight: 'heading',
       my: 1
