@@ -1,4 +1,5 @@
-import { Box, Image, IconButton } from 'theme-ui'
+import Image from 'next/image'
+import { Box, IconButton } from 'theme-ui'
 import { PlayCircle } from 'react-feather'
 
 const PlayButton = props => (
@@ -19,13 +20,19 @@ const PlayButton = props => (
 )
 
 const Artwork = ({ src, alt, size = 64 }) => (
-  <Box sx={{ cursor: 'pointer', position: 'relative', lineHeight: 0 }}>
+  <Box sx={{
+    cursor: 'pointer',
+    position: 'relative',
+    lineHeight: 0,
+    borderRadius: size < 100 ? 'small' : 'default',
+    overflow: 'hidden'
+  }}>
     <Image
       src={src}
       loading="lazy"
       width={size}
+      height={size}
       alt={`${alt} artwork`}
-      sx={{ borderRadius: size < 100 ? 'small' : 'default' }}
     />
     <PlayButton />
   </Box>

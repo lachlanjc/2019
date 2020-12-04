@@ -224,6 +224,12 @@ export default {
       maxWidth: '100%'
     },
     hr: {
+      border: 0,
+      height: 4,
+      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange})`,
+      borderRadius: 2,
+      maxWidth: 256,
+      mx: 'auto',
       my: [4, 5]
     }
   }
