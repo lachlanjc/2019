@@ -64,6 +64,14 @@ export default {
       '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     monospace: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
   },
+  lineHeights: {
+    limit: 0.875,
+    title: 1,
+    heading: 1.125,
+    subheading: 1.25,
+    caption: 1.375,
+    body: 1.5
+  },
   fontWeights: {
     body: 400,
     bold: 700,
@@ -179,6 +187,7 @@ export default {
     },
     wide: {
       variant: 'layout.container',
+      px: [3, null, 4],
       maxWidth: ['wide', null, null, null, 'widePlus']
     },
     copy: {

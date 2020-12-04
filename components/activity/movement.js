@@ -25,7 +25,7 @@ const renderTooltip = ({ active, payload }) => {
   return null
 }
 
-export default () => {
+const Movement = () => {
   const ref = useRef(null)
   const { width } = useComponentSize(ref)
   const { theme } = useThemeUI()
@@ -65,6 +65,8 @@ export default () => {
     </Box>
   )
 }
+
+export default Movement
 
 /*
 const data02 = [
