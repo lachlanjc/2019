@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import App from 'next/app'
 import { ThemeProvider } from 'theme-ui'
 
@@ -13,15 +13,13 @@ class Root extends App {
   render() {
     const { Component, pageProps } = this.props
     return (
-      <>
-        <ThemeProvider theme={theme}>
-          <Meta />
-          <NProgress color={theme.colors.accent} />
-          <Nav />
-          <Component {...pageProps} />
-          <Footer />
-        </ThemeProvider>
-      </>
+      <ThemeProvider theme={theme}>
+        <Meta />
+        <NProgress color={theme.colors.accent} />
+        <Nav />
+        <Component {...pageProps} />
+        <Footer />
+      </ThemeProvider>
     )
   }
 }

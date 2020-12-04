@@ -4,7 +4,7 @@ import { colors } from './theme'
 const name = '2019 in Review – @lachlanjc'
 const makeTitle = title => (title === name ? title : `${title} – ${name}`)
 
-export default ({
+const Meta = ({
   title = name,
   description = 'Looking back at Lachlan Campbell’s 2019.',
   // image = 'https://hackathons.now.sh/card.png',
@@ -60,3 +60,5 @@ export default ({
     */}
   </Head>
 )
+
+export default Meta

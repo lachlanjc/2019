@@ -1,10 +1,10 @@
-import { Container, Grid, Heading, Flex, Box } from 'theme-ui'
-import Rings from './ring'
+import { Grid, Heading, Flex } from 'theme-ui'
+import Ring from './ring'
 import { padMonth, getMonth } from '../util'
 import { times, keys, filter, startsWith } from 'lodash'
 import activity from '../../data/rings.json'
 
-export default () => (
+const Rings = () => (
   <Grid
     columns={[null, null, 2, 3]}
     variant="wide"
@@ -47,7 +47,7 @@ export default () => (
                   }
                 }}
               >
-                <Rings size={48} {...activity[date]} />
+                <Ring size={48} {...activity[date]} />
               </Flex>
             )
           )}
@@ -56,3 +56,5 @@ export default () => (
     ))}
   </Grid>
 )
+
+export default Rings

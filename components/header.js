@@ -1,5 +1,6 @@
 import { useColorMode, Box, Heading } from 'theme-ui'
-export default ({ bg = 'primary', color = 'white', sx = {}, children }) => {
+
+const Header = ({ bg = 'primary', color = 'white', sx = {}, children }) => {
   const dark = useColorMode()[0] === 'dark'
   return (
     <Box
@@ -31,3 +32,5 @@ export default ({ bg = 'primary', color = 'white', sx = {}, children }) => {
     </Box>
   )
 }
+
+export default Header

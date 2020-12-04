@@ -5,7 +5,7 @@ import Movement from '../components/activity/movement'
 import Rings from '../components/activity/rings'
 import GitHub from 'react-github-calendar'
 
-export default () => (
+const ActivityPage = () => (
   <Box as="main" sx={{ color: 'text' }}>
     <Meta
       title="Activity"
@@ -30,3 +30,5 @@ export default () => (
     <Rings />
   </Box>
 )
+
+export default ActivityPage

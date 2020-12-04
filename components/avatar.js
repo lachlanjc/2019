@@ -1,6 +1,6 @@
 import { Image } from 'theme-ui'
 
-export default ({ size = 32, ...props }) => (
+const Avatar = ({ size = 32, ...props }) => (
   <Image
     {...props}
     src="https://github.com/lachlanjc.png"
@@ -10,3 +10,6 @@ export default ({ size = 32, ...props }) => (
     sx={{ borderRadius: 'circle', overflow: 'hidden', ...props.sx }}
   />
 )
+
+export default Avatar
+

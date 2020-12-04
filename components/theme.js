@@ -64,12 +64,6 @@ export default {
       '"iA Quattro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
     monospace: '"SFMono-Regular", "Roboto Mono", Menlo, Consolas, monospace'
   },
-  lineHeights: {
-    title: 1,
-    heading: 1.125,
-    subheading: 1.25,
-    body: 1.5
-  },
   fontWeights: {
     body: 400,
     bold: 700,
@@ -144,18 +138,6 @@ export default {
       fontFamily: 'accent'
     }
   },
-  alerts: {
-    primary: {
-      color: 'background',
-      bg: 'orange',
-      fontWeight: 'body'
-    }
-  },
-  badges: {
-    pill: {
-      borderRadius: 'circle'
-    }
-  },
   buttons: {
     primary: {
       bg: 'primary',
@@ -170,34 +152,6 @@ export default {
       bg: 'transparent',
       color: 'primary',
       border: '2px solid currentColor'
-    }
-  },
-  forms: {
-    input: {
-      bg: 'elevated',
-      color: 'text',
-      fontFamily: 'inherit',
-      borderRadius: 'base',
-      boxShadow: 'small',
-      transition: 'box-shadow .125s ease-in-out',
-      border: 0,
-      ':hover,:focus': { boxShadow: 'card' },
-      '::-webkit-input-placeholder': { color: 'placeholder' },
-      '::-moz-placeholder': { color: 'placeholder' },
-      ':-ms-input-placeholder': { color: 'placeholder' },
-      '&[type="search"]::-webkit-search-decoration': { display: 'none' }
-    },
-    label: {
-      color: 'text',
-      fontWeight: 'medium'
-    },
-    hidden: {
-      position: 'absolute',
-      height: '1px',
-      width: '1px',
-      overflow: 'hidden',
-      clip: 'rect(1px, 1px, 1px, 1px)',
-      whiteSpace: 'nowrap'
     }
   },
   cards: {
@@ -261,8 +215,7 @@ export default {
       maxWidth: '100%'
     },
     hr: {
-      borderColor: 'border',
-      my: [3, 4]
+      my: [4, 5]
     }
   }
 }

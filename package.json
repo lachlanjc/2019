@@ -3,32 +3,29 @@
   "description": "@lachlanjc’s 2019 year in review",
   "version": "1.0.0",
   "private": true,
-  "author": "Lachlan Campbell <lachlan@hackpenn.com>",
+  "author": "Lachlan Campbell <lachlanjc@hey.com>",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next"
   },
   "dependencies": {
-    "@emotion/styled": "^10.0.27",
+    "@hackclub/theme": "^0.3.1",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^9.5.5",
     "@rehooks/component-size": "^1.0.3",
-    "@zeit/next-mdx": "^1.2.0",
-    "babel-plugin-emotion": "^10.0.27",
     "comma-number": "^2.0.1",
-    "emotion": "^10.0.27",
-    "emotion-server": "^10.0.27",
-    "load-json-file": "^6.2.0",
-    "lodash": "^4.17.15",
-    "next": "^9.2.1",
+    "lodash": "^4.17.20",
+    "next": "^9.5.5",
     "nprogress": "^0.2.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-feather": "^2.0.3",
-    "react-github-calendar": "^0.16.0",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-feather": "^2.0.9",
+    "react-github-calendar": "^2.0.1",
     "react-music-embed": "^1.0.1",
     "react-song-embed": "^1.0.0",
     "recharts": "^2.0.0-beta.1",
-    "theme-ui": "^0.3.1"
+    "theme-ui": "^0.3.4"
   },
   "license": "MIT"
 }

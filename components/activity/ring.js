@@ -6,7 +6,7 @@ const colors = {
   stand: '#1eeaef'
 }
 
-export default ({
+const Ring = ({
   move = 0.5,
   exercise = 0.75,
   stand = 0.875,
@@ -70,3 +70,5 @@ export default ({
     `}</style>
   </svg>
 )
+
+export default Ring

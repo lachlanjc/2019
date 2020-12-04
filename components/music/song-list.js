@@ -4,7 +4,7 @@ import Artwork from './artwork'
 
 const getAlbum = a => (a.includes(' - Single') ? 'Single' : a)
 
-export default ({ songs = [], monthly = false, sx = { px: 3 }, onPlay }) => (
+const SongList = ({ songs = [], monthly = false, sx = { px: 3 }, onPlay }) => (
   <Grid
     as="ol"
     gap={0}
@@ -54,3 +54,5 @@ export default ({ songs = [], monthly = false, sx = { px: 3 }, onPlay }) => (
     ))}
   </Grid>
 )
+
+export default SongList
