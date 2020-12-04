@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@emotion/styled": "^10.0.27",
+    "@rehooks/component-size": "^1.0.3",
     "@zeit/next-mdx": "^1.2.0",
     "babel-plugin-emotion": "^10.0.27",
+    "comma-number": "^2.0.1",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",
     "load-json-file": "^6.2.0",
@@ -25,6 +27,7 @@
     "react-github-calendar": "^0.16.0",
     "react-music-embed": "^1.0.1",
     "react-song-embed": "^1.0.0",
+    "recharts": "^2.0.0-beta.1",
     "theme-ui": "^0.3.1"
   },
   "license": "MIT"

@@ -38,7 +38,7 @@ export default {
     border: colors.smoke,
     placeholder: colors.muted,
     secondary: colors.slate,
-    primary: colors.blue,
+    primary: colors.cyan,
     muted: colors.muted,
     accent: colors.orange,
     modes: {
