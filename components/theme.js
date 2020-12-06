@@ -23,7 +23,7 @@ export const colors = {
   instagram: '#e1306c'
 }
 
-export default {
+const theme = {
   breakpoints: [32, 48, 64, 96, 128].map(w => `${w}em`),
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [12, 16, 20, 24, 32, 48, 64, 96, 128],
@@ -235,3 +235,34 @@ export default {
     }
   }
 }
+
+theme.util = {
+  motion: '@media (prefers-reduced-motion: no-preference)',
+  reduceMotion: '@media (prefers-reduced-motion: reduce)',
+  supportsClipText: '@supports (-webkit-background-clip: text)',
+  supportsBackdrop:
+    '@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none)'
+}
+
+theme.cards.translucent = {
+  backgroundColor: 'rgba(255, 255, 255, 0.98)',
+  color: 'text',
+  boxShadow: 'none',
+  [theme.util.supportsBackdrop]: {
+    backgroundColor: 'rgba(255, 255, 255, 0.75)',
+    backdropFilter: 'saturate(180%) blur(20px)',
+    WebkitBackdropFilter: 'saturate(180%) blur(20px)'
+  }
+}
+theme.cards.translucentDark = {
+  backgroundColor: 'rgba(0, 0, 0, 0.875)',
+  color: 'white',
+  boxShadow: 'none',
+  [theme.util.supportsBackdrop]: {
+    backgroundColor: 'rgba(0, 0, 0, 0.625)',
+    backdropFilter: 'saturate(180%) blur(16px)',
+    WebkitBackdropFilter: 'saturate(180%) blur(16px)'
+  }
+}
+
+export default theme

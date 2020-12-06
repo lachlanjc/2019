@@ -1,5 +1,5 @@
-import { Banner } from '../components/blocks'
-import { BaseStyles, Container } from 'theme-ui'
+import { Banner, Photo, Pano } from '../components/blocks'
+import { BaseStyles, Container, Grid } from 'theme-ui'
 
 <Banner>
 
@@ -13,16 +13,38 @@ import { BaseStyles, Container } from 'theme-ui'
 
 </Banner>
 
-<Container as={BaseStyles} variant="copy" sx={{ color: 'text', fontSize: 2, py: [3, 4] }}>
+<Container
+  as={BaseStyles}
+  sx={{
+    color: 'text',
+    fontSize: 2,
+    py: [3, 4],
+    'p, h2': {
+      maxWidth: 'copy',
+      mx: 'auto'
+    },
+    '> figure': {
+      my: 4
+    },
+    '> section': {
+      position: 'relative',
+      width: '100vw',
+      left: '50%',
+      right: '50%',
+      mx: '-50vw',
+      my: [4, 5]
+    }
+  }}
+>
 
 Each year in my recent life seems to double the scope of the last. In
 [2017](https://lachlanjc.me/2017), I started my [high school coding
 club](https://twitter.com/zachlatta/status/955522122750701568?s=20), came out
 (twice), went to San Francisco for the first time, went to my first hackathon,
-got my black belt, and started working at [Hack Club](https://hackclub.com). In
+got my black belt, and started working at [Hack&nbsp;Club](https://hackclub.com). In
 2018, I organized my [first hackathon](https://hackhappyvalley.com), opened
 gender-neutral bathrooms at my school, moved to San Francisco for the summer to
-[build Hack Club
+[build Hack&nbsp;Club
 Bank](https://medium.com/hackclub/a-bank-for-student-hackers-e5d894ea5375),
 [traveled](https://hackchicago.io)
 [more](https://www.instagram.com/p/BmI9vIqnRqP/), helped [teach sex
@@ -60,75 +82,144 @@ work on the part of me & my incredible co-organizers
 ([Matthew](https://matthewstanciu.me/), Joy, [Zane](https://zane.sh/),
 [Theo](https://tmb.sh/), & Jasmine). As two feet of snow fell throughout the
 weekend, 111 students grades 6-12 descended on my hometown in central
-Pennsylvania to build 40+ incredible games, robots, apps, & more. We raised \$15k
-to make it happen, and the weekend was truly unforgettable. Our town had no real
+Pennsylvania to build 40+ incredible games, robots, apps, & more. We raised $15k
+to make it happen, and the weekend was truly unforgettable. Our town has no real
 opportunities for teenagers in tech—nearly half of attendees were entirely new
 to coding—and helping unlock the doors to coding brought my high school coding
 club to a new peak. We had ice cream at midnight, a 2am dance party, & lots
 more…
 
-The next day, I left for LA (first time!) for a retreat with the Hack Club team.
-Hack Club, a community of high school makers & coding club leaders around the
+The next day, I left for LA (first time!) for a retreat with the Hack&nbsp;Club team.
+Hack&nbsp;Club, a community of high school makers & coding club leaders around the
 world, is a cause I deeply believe in. Humanity is facing challenges like never
 before, and now more than ever, we need a generation of young people equipped
-with the agency & skills to create deep change. (Coding clubs, it turns out, are
-just the first step.) At the retreat, in the mountains of Idyllwild, CA, our
-remote team finally got to bond & spend a week in offline discussion mode,
+with the agency & skills to create deep change. (Coding clubs are just the first
+step.) At the retreat, in the mountains of Idyllwild, CA, our remote team
+finally got to bond & spend a week in offline discussion mode,
 planning another year of work for the community.
+
+<Photo
+  src="/winter/retreat.jpeg"
+  width={1280}
+  height={960}
+  alt="Hack Club team at a café in Idyllwild"
+/>
 
 Briefly back at home, I had the privilege to model for a pop-up fashion show put
 on by my LGBTQ+ youth group, opening a trans clothing exchange at a local café.
 It was a blast.
 
+---
+
 ## Spring
 
 Never one to waste time, [Zach Latta](https://zachlatta.com/), the founder of
-Hack Club & my dear friend, called me about coming back to San Francisco. I
+Hack&nbsp;Club & my dear friend, called me about coming back to San Francisco. I
 packed up & moved out for 1.5 whirlwind months. In short order, based partly off
 my experiences running Hack Pennsylvania, we entirely [redesigned & launched
-Hack Club Bank](https://hackclub.com/bank/), our tool for high schoolers to get
+Hack&nbsp;Club Bank](https://hackclub.com/bank/), our tool for high schoolers to get
 nonprofit bank accounts to run hackathons & more. I stayed up for 55 hours
-attending [Los Altos Hacks](https://www.losaltoshacks.com/) with the Hack Club
-team, Theo, & [Kat](https://katmh.com). I went to my first [Conan
-Gray](https://g.co/kgs/v6vw2S) concert. I had an unforgettable evening with the
-stunning [Amanda Southworth](https://twitter.com/amndasuthwrth).
+attending [Los Altos Hacks](https://www.losaltoshacks.com/) with the
+Hack&nbsp;Club team, Theo, & [Kat](https://katmh.com). I went to my first
+[Conan Gray](https://g.co/kgs/v6vw2S) concert. I had an unforgettable evening
+with the stunning [Amanda Southworth](https://twitter.com/amndasuthwrth).
 
 One truly special memory from my time in San Francisco was my close friend
-Matthew visiting. Over a nighttime hike, we realized our mutual affection &
-began a relationship better than I could ever have predicted.
+Matthew visiting. Over a nighttime hike in the Castro, we realized our mutual
+affection & it began a relationship that’s made me incredibly happy this year.
 
-For all the advantages of being surrounded by tech, I found living in SF rather
-isolating and overwhelming. I returned home to take a break and see some
-friends, before leaving for Indiana to briefly visit Matthew and heading to a
-second Hack Club team retreat in Idyllwild. With a slightly different mix of
-team members, we had a fantastic time chatting, cooking, hiking, & exploring
-nearby towns together.
+<Photo
+  src="/spring/sf_sunset.jpeg"
+  width={1280}
+  height={960}
+  alt="San Francisco at sunset, seen from the Embaracadero piers"
+/>
+
+But for all the advantages of being surrounded by tech, I found living in SF
+rather isolating and overwhelming. I was just working and sleeping, and had
+little to ground me as a person outside that. I returned home to take a break
+and see some friends, before leaving for Indiana to briefly visit Matthew and
+heading to a second Hack&nbsp;Club team retreat in Idyllwild.
 
 Though compressed periods of stress can lead to bursts of creativity, extended
 periods of rested focus have few parallels. Back at home, I continued working
-for Hack Club, designing new pages such as [Hack
-Camp](https://hackclub.com/camp/). Meanwhile, after starting late February,
-organizing heated up for [Windy City Hacks](https://windyhacks.com), a June
-hackathon in Chicago led by Matthew. Matthew came to visit for a beautiful
-period. Anticipating a summer of traveling & personal time, I said goodbye to my
-teammates at Hack Club, and attended my high school’s prom & graduation for a
-final farewell there.
+for Hack&nbsp;Club, designing new pages such as
+[Hack&nbsp;Camp](https://hackclub.com/camp/), a design I’m incredibly proud of.
+Meanwhile, after starting late February, organizing heated up for
+[Windy City Hacks](https://windyhacks.com), a June hackathon in Chicago led by
+Matthew. Matthew came for a visit, and anticipating a summer of
+traveling & personal time, I said goodbye to my teammates at Hack&nbsp;Club for the rest of the year. Attended my high school’s prom & graduation felt like a final farewell there.
+
+---
 
 ## Summer
 
 Soon, I headed to Chicago for Windy City Hacks. After thousands more hours of
 organizing by Matthew, me & the [whole
-team](https://2019.windyhacks.com/#leadership), raising nearly \$14k, and days of
+team](https://2019-site.windyhacks.com/#leadership), raising nearly $14k, and days of
 local preparation, 160 students came from Chicago & across the Midwest for
-another remarkable weekend of hacking.
+another remarkable weekend of hacking. Hackathons are truly the most physically
+draining thing I regularly do, and always require at least the event’s duration
+for recuperation.
 
-Afterwards I joined Hack Clubbers from across the country in descending on San
-Francisco for Hack Club/Make School’s Flagship conference, where
+Afterwards I joined Hack&nbsp;Clubbers from across the country in descending on San
+Francisco for Hack&nbsp;Club/Make School’s Flagship conference, where I gave a
+talk on [starting your first hackathon](https://notebook.lachlanjc.com/2020-01-19_how_to_start_your_first_hackathon/).
 
-At home, liberated from the majority of previous commitments, I
+<Photo
+  src="/summer/flagship_superclub.jpeg"
+  width={1280}
+  height={960}
+  alt="Posing with Hack Club friends—Theo, Zane, me, Ava, Matthew—at the end of Flagship"
+/>
 
-To round out the summer, I loaded up my parents’ car and headed to New York City
+The rest of July I flew constantly around the Midwest:
+I headed to Cincinnati, OH to teach, mentor, & judge at
+[Hack Cincinnati](https://hack-cincinnati.netlify.app), visited family in
+Minneapolis, MN, made a final visit to Matthew for the year, & headed home.
+Free from my previous commitments but still with a month before college began,
+I focused on improving my JavaScript & UI skills, learning how to use
+[Theme UI](https://theme-ui.com/home) & [MDX](https://mdxjs.com)
+(with which I’m writing this), familiarizing myself with serverless, & making a
+steady stream of sites, from the
+[Hack Pennsylvania wrapup](https://hackpenn.com) to my
+[Notebook](https://notebook.lachlanjc.com) & an open source
+[Songlink embed component](https://lachlanjc.github.io/react-song-embed/)
+powering this site’s [Music section](/music). It’s a rare privilege to get to
+work on creative projects & personal learning without financial or professional
+pressure, & I’m grateful for that.
+
+<Photo
+  src="/summer/matthew_cute.jpeg"
+  width={1280}
+  height={960}
+  alt="Matthew & me at the end of the summer"
+/>
+
+To end the summer, I loaded up my parents’ car and headed to New York City
 to start at NYU, where I’m majoring in “Interactive Media Arts” (making art with
-tech/coding/building)
+tech/coding/building). At the beginning of high school I wasn’t sure if college
+was the right move for me, but I decided to go for 1) the social experience
+(”networking”) & 2) enrichment I wouldn’t get otherwise. However, while I’m not
+going to school to learn what I want to do professionally, art school didn’t
+feel right, & personally I find computer science pretty uninteresting. Visiting
+IMA felt more like stepping into a hackathon, a place where I could make things
+I genuinely care about, so [I applied](https://nyu.lachlanjc.com) last year.
+
+<Pano
+  src="/summer/dorm_pano.jpeg"
+  width={13774}
+  height={3860}
+  alt="Me & my roommate in our dorm room"
+/>
+
+---
+
+## Fall
+
+I’ve long dreamed of living in New York, & that I’m just casually writing
+this from the IMA building in Brooklyn is amazing. I got to [meet Tim Cook](https://twitter.com/lachlanjc/status/1175484567752495106?s=20), hang out with [so many friends](https://twitter.com/lachlanjc/status/1175075858643656704?s=20), & [randomly meet people](https://twitter.com/lachlanjc/status/1166825269845528589?s=20) in Washington Square Park. [Attending Adulting.dev](https://twitter.com/lachlanjc/status/1170469462480474113?s=20), the [NYC Design Systems Coalition](https://designsystems.nyc) meetup, & seeing Conan Gray live (again!) were all highlights, as well as just exploring the city & taking the subway to new places.
+
+[My coursework](https://ima.lachlanjc.com) has been incredibly stimulating. I’m incredibly proud of (link cw: sexual abuse) [“One Day This Kid Will Talk”](https://ima.lachlanjc.com/one_day_this_kid/), an interactive essay I wrote about queer coming-of-age. I also wrote [“Imagining Worlds Post-Human”](https://ima.lachlanjc.com/imagining_worlds_post_human/), short posts about [digital storytelling](https://ima.lachlanjc.com/2019-09-15_cl_scott_mccloud_and_digital_storytelling/), tried my hand at [digital animation](https://ima.lachlanjc.com/2019-10-30_cl_midterm_animation_project/), [made a Janelle Monáe visualizer](https://ima.lachlanjc.com/2019-09-29_cc_week_4_project/), [projection-mapped shoes](https://ima.lachlanjc.com/2019-11-15_cl_projection_project/), & lots more.
 
 </Container>
