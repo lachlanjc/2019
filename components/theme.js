@@ -170,14 +170,18 @@ const theme = {
       p: [3, 4],
       borderRadius: 'extra',
       boxShadow: 'card',
-      input: { boxShadow: 'none !important' }
+      position: 'relative'
     },
-    sunken: {
-      bg: 'sunken',
-      p: [3, 4],
-      borderRadius: 'extra',
-      'input, a': { bg: 'header', boxShadow: 'none !important' }
-    }
+    interactive: {
+      variant: 'cards.primary',
+      textDecoration: 'none',
+      WebkitTapHighlightColor: 'transparent',
+      transition: 'transform .125s ease-in-out, box-shadow .125s ease-in-out',
+      ':hover,:focus': {
+        transform: 'scale(1.0625)',
+        boxShadow: 'elevated'
+      }
+    },
   },
   layout: {
     container: {

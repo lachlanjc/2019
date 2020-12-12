@@ -7,9 +7,9 @@ const colors = {
 }
 
 const Ring = ({
-  move = 0.5,
-  exercise = 0.75,
-  stand = 0.875,
+  move = 0.75,
+  exercise = 0.66,
+  stand = 0.5,
   size = 72,
   ...props
 }) => (
