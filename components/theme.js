@@ -40,7 +40,7 @@ const theme = {
     secondary: colors.slate,
     primary: colors.cyan,
     muted: colors.muted,
-    accent: colors.orange,
+    accent: colors.yellow,
     music: '#ff365d',
     modes: {
       dark: {

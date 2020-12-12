@@ -8,12 +8,12 @@ import Player from '../components/music/player'
 
 import topSongs from '../data/top-songs.json'
 import monthlySongs from '../data/monthly-songs.json'
-import springSongs from '../data/spring-songs.json'
-import summerSongs from '../data/summer-songs.json'
-import fallSongs from '../data/fall-songs.json'
+import spring from '../data/spring-songs.json'
+import summer from '../data/summer-songs.json'
+import fall from '../data/fall-songs.json'
 import { capitalize } from 'lodash'
 
-const seasons = { spring: springSongs, summer: summerSongs, fall: fallSongs }
+const seasons = { spring, summer, fall }
 
 const MusicPage = () => {
   const [url, setUrl] = useState(null)
@@ -32,9 +32,8 @@ const MusicPage = () => {
             name="Conan Gray"
             artwork="https://images.sk-static.com/images/media/img/col6/20190206-182210-650598.jpg"
           >
-            Conan is hands-down my favorite artist right now—stand-out
-            songwriting, creative direction, style—& I can’t wait for his album.
-            Seeing him live twice this year (in SF & NYC) was a joy.
+            Conan is hands-down my favorite new artist—stand-out style &
+            songwriting. Seeing him live twice this year was a joy.
           </Artist>
           <Album
             label="Single of the Year"
@@ -42,7 +41,7 @@ const MusicPage = () => {
             artist="Lauv & Troye Sivan"
             artwork="https://is5-ssl.mzstatic.com/image/thumb/Music114/v4/05/c7/1b/05c71b41-8627-37a3-6fc4-0f1a2272a18c/source/1024x1024bb.png"
           >
-            This song isn’t super deep or groundbreaking, but it’s perfect pop.
+            This song isn’t super deep or groundbreaking, but it’s perfect pop, & I’m a sucker for that.
           </Album>
           <Album
             label="Album of the Year"
@@ -60,14 +59,14 @@ const MusicPage = () => {
           </Album>
         </Grid>
         <Heading as="h2" variant="headline">
-          Songs of the months
+          Songs of the month
         </Heading>
       </Container>
       <SongList songs={monthlySongs} monthly onPlay={setUrl} />
       <Heading as="h2" variant="headline" sx={{ mt: [4, 5], mb: [3, 4] }}>
         Seasonal playlists
       </Heading>
-      <Grid columns={[null, null, 3]} sx={{ p: 3 }}>
+      <Grid columns={[null, 2, null, 3]} sx={{ p: 3 }}>
         {Object.keys(seasons).map(season => (
           <div key={season} id={season}>
             <Heading as="h3" variant="subheadline" sx={{ pl: [36, 48] }}>
@@ -79,11 +78,11 @@ const MusicPage = () => {
       </Grid>
       <Container sx={{ pt: [3, 4, 5], pb: [2, 3] }}>
         <Heading as="h2" variant="headline">
-          Top 100 songs
+          Top 99 songs
         </Heading>
       </Container>
       <SongList songs={topSongs} onPlay={setUrl} />
-      <Player url={url} onClose={e => setUrl(null)} />
+      <Player url={url} onClose={() => setUrl(null)} />
     </Box>
   )
 }

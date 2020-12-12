@@ -4,7 +4,7 @@ import Artwork from './artwork'
 const Label = props => (
   <Text
     as="span"
-    sx={{ color: 'accent', textTransform: 'uppercase' }}
+    sx={{ color: 'music', textTransform: 'uppercase' }}
     {...props}
   />
 )

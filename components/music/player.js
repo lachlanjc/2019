@@ -31,7 +31,7 @@ const Player = ({ url, onClose }) => {
         zIndex: 3,
         overflow: 'hidden',
         transition: 'transform 0.375s ease-in-out',
-        transform: url ? 'translateY(0)' : 'translateY(200%)'
+        transform: (url !== null && url !== '') ? 'translateY(0)' : 'translateY(200%)'
       }}
     >
       <Flex
