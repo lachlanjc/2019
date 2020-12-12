@@ -213,13 +213,19 @@ const theme = {
       margin: 0,
       minHeight: '100vh'
     },
+    h2: {
+      variant: 'text.heading',
+      my: 0,
+      fontSize: [4, 5]
+    },
     p: {
       color: 'text',
       fontWeight: 'body',
       lineHeight: 'body'
     },
     a: {
-      color: 'primary'
+      color: 'primary',
+      textUnderlinePosition: 'under',
     },
     code: {
       fontFamily: 'monospace',
@@ -230,9 +236,9 @@ const theme = {
     },
     hr: {
       border: 0,
-      height: 4,
-      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange})`,
-      borderRadius: 2,
+      py: 1,
+      backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange} 100%)`,
+      borderRadius: 999,
       maxWidth: 256,
       mx: 'auto',
       my: [4, 5]

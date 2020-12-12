@@ -14,7 +14,11 @@ const ActivityPage = () => (
     <Header bg="primary">Activity</Header>
     <Container
       variant="copy"
-      sx={{ mb: [4, 5], text: { fill: 'currentColor !important', opacity: 0.75 } }}
+      sx={{
+        mb: [4, 5],
+        article: { height: 133 },
+        text: { fill: 'currentColor !important', opacity: 0.75 }
+      }}
     >
       <Heading as="h2" variant="headline">
         GitHub
