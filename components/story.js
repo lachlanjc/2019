@@ -1,15 +1,14 @@
 import { BaseStyles, Box, Container } from 'theme-ui'
+import BGImg from './bg-img'
 import theme from './theme'
 
-export const Banner = props => (
+export const Banner = ({ children }) => (
   <Box
-    {...props}
+    as="header"
     sx={{
       pt: [5, 6, 7],
       pb: [4, 5, 6],
-      backgroundImage: 'url(/cover.jpg)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
+      position: 'relative',
       color: 'white',
       textAlign: 'center',
       h1: {
@@ -36,7 +35,16 @@ export const Banner = props => (
         fontWeight: 'bold'
       }
     }}
-  />
+  >
+    <BGImg
+      src="/cover.jpg"
+      alt="Hudson river/Jersey City at sunset, seen from Battery Park, Manhattan"
+      width={2224}
+      height={1251}
+      priority
+    />
+    {children}
+  </Box>
 )
 
 const Story = props => (
@@ -80,24 +88,29 @@ const Story = props => (
           }
         },
         ':nth-of-type(1)': {
-          backgroundImage: `linear-gradient(${theme.colors.cyan} 33%, ${theme.colors.blue
-            } 100%)`
+          backgroundImage: `linear-gradient(${theme.colors.cyan} 33%, ${
+            theme.colors.blue
+          } 100%)`
         },
         ':nth-of-type(2)': {
-          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${theme.colors.green
-            } 100%)`
+          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${
+            theme.colors.green
+          } 100%)`
         },
         ':nth-of-type(3)': {
-          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${theme.colors.orange
-            } 100%)`
+          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${
+            theme.colors.orange
+          } 100%)`
         },
         ':nth-of-type(4)': {
-          backgroundImage: `linear-gradient(${theme.colors.orange} 33%, ${theme.colors.red
-            } 100%)`
+          backgroundImage: `linear-gradient(${theme.colors.orange} 33%, ${
+            theme.colors.red
+          } 100%)`
         },
         ':nth-of-type(5)': {
-          backgroundImage: `linear-gradient(${theme.colors.smoke} 33%, ${theme.colors.muted
-            } 100%)`
+          backgroundImage: `linear-gradient(${theme.colors.smoke} 33%, ${
+            theme.colors.muted
+          } 100%)`
         }
       }
     }}

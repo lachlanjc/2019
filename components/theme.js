@@ -50,9 +50,7 @@ const theme = {
         sunken: colors.darker,
         border: colors.darkless,
         placeholder: colors.slate,
-        secondary: colors.muted,
-        muted: colors.muted,
-        accent: colors.cyan
+        secondary: colors.muted
       }
     }
   },

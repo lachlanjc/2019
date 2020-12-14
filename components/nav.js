@@ -50,7 +50,8 @@ const Nav = () => {
         top: 0,
         left: 0,
         right: 0,
-        position: 'absolute'
+        position: 'absolute',
+        zIndex: 2
       }}
     >
       <Container

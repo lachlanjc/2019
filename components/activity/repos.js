@@ -12,7 +12,7 @@ export const Repo = ({ children }) => (
       p: 2,
       borderRadius: 'default',
       border: '1px solid',
-      borderColor: 'smoke'
+      borderColor: 'border'
     }}
     as="a"
     href={`https://github.com/${children}`}
