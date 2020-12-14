@@ -19,10 +19,12 @@ const Footer = () => {
         my: [4, 5],
         a: {
           variant: 'cards.interactive',
+          p: [4, 4],
           bg: 'black',
           color: 'white',
           display: 'flex',
           flexDirection: 'column',
+          minHeight: 128,
           '> svg': {
             position: 'absolute',
             top: 3,
