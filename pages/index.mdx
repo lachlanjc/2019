@@ -1,6 +1,6 @@
-import theme from '../components/theme'
-import { Banner, Photo, Pano, YouTube } from '../components/blocks'
-import { BaseStyles, Container, Grid } from 'theme-ui'
+import Story, { Banner } from '../components/story'
+import { Photo, Pano, YouTube } from '../components/blocks'
+import { Grid } from 'theme-ui'
 
 <Banner>
 
@@ -14,52 +14,7 @@ import { BaseStyles, Container, Grid } from 'theme-ui'
 
 </Banner>
 
-<Container
-  as={BaseStyles}
-  sx={{
-    color: 'text',
-    fontSize: 2,
-    py: [3, 4],
-    'p, h2': {
-      maxWidth: 'copyPlus',
-      mx: 'auto'
-    },
-    '> figure': {
-      my: 4
-    },
-    '> section': {
-      position: 'relative',
-      width: '100vw',
-      left: '50%',
-      right: '50%',
-      mx: '-50vw',
-      my: [4, 5]
-    },
-    hr: {
-      [theme.util.motion]: {
-        transition: 'transform 1.5s ease-in-out',
-        ':hover': {
-          transform: 'scaleY(8) scaleX(-8)'
-        }
-      },
-      ':nth-of-type(1)': {
-        backgroundImage: `linear-gradient(${theme.colors.cyan} 33%, ${theme.colors.blue} 100%)`,
-      },
-      ':nth-of-type(2)': {
-        backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${theme.colors.green} 100%)`,
-      },
-      ':nth-of-type(3)': {
-        backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${theme.colors.orange} 100%)`,
-      },
-      ':nth-of-type(4)': {
-        backgroundImage: `linear-gradient(${theme.colors.orange} 33%, ${theme.colors.red} 100%)`,
-      },
-      ':nth-of-type(5)': {
-        backgroundImage: `linear-gradient(${theme.colors.smoke} 33%, ${theme.colors.muted} 100%)`,
-      }
-    }
-  }}
->
+<Story>
 
 Each year in my recent life seems to double the scope of the last. In
 [2017](https://lachlanjc.me/2017), I started my [high school coding
@@ -197,17 +152,15 @@ talk on [starting your first hackathon](https://notebook.lachlanjc.com/2020-01-1
   alt="Posing with Hack Club friends—Theo, Zane, me, Ava, Matthew—at the end of Flagship"
 />
 
-The rest of July I flew constantly around the Midwest:
-I headed to Cincinnati, OH to teach, mentor, & judge at
-[Hack Cincinnati](https://hack-cincinnati.netlify.app), visited family in
-Minneapolis, MN, made a final visit to Matthew for the year, & headed home.
-Free from my previous commitments but still with a month before college began,
-I focused on improving my JavaScript & UI skills, learning how to use
-[Theme UI](https://theme-ui.com/home) & [MDX](https://mdxjs.com)
+The rest of July I flew all across the Midwest: I headed to Cincinnati, OH to
+teach, mentor, & judge at [Hack Cincinnati](https://hack-cincinnati.netlify.app),
+visited family in Minneapolis, MN, made a final visit to Matthew for the year,
+& headed home. Free from my previous commitments but still with a month before
+college began, I focused on improving my JavaScript & UI skills, learning how to
+use [Theme UI](https://theme-ui.com/home) & [MDX](https://mdxjs.com)
 (with which I’m writing this), familiarizing myself with serverless, & making a
-steady stream of sites, from the
-[Hack Pennsylvania wrapup](https://hackpenn.com) to my
-[Notebook](https://notebook.lachlanjc.com) & an open source
+steady stream of sites, from the [Hack Pennsylvania wrapup](https://hackpenn.com)
+to my [Notebook](https://notebook.lachlanjc.com) & an open source
 [Songlink embed component](https://lachlanjc.github.io/react-song-embed/)
 powering this site’s [Music section](/music). It’s a rare privilege to get to
 work on creative projects & personal learning without financial or professional
@@ -242,8 +195,50 @@ genuinely care about, so [I&nbsp;applied](https://nyu.lachlanjc.com) last fall.
 ## Fall
 
 I’ve long dreamed of living in New York, & that I’m just casually writing
-this from the IMA building in Brooklyn is amazing. I got to [meet Tim Cook](https://twitter.com/lachlanjc/status/1175484567752495106?s=20), hang out with [so many friends](https://twitter.com/lachlanjc/status/1175075858643656704?s=20), & [randomly meet people](https://twitter.com/lachlanjc/status/1166825269845528589?s=20) in Washington Square Park. [Attending Adulting.dev](https://twitter.com/lachlanjc/status/1170469462480474113?s=20), the [NYC Design Systems Coalition](https://designsystems.nyc) meetup, & seeing Conan Gray live (again!) were all highlights, as well as just exploring the city & taking the subway to new places.
+this from the IMA building in Brooklyn is amazing. Getting to [meet Tim Cook](https://twitter.com/lachlanjc/status/1175484567752495106?s=20),
+hang out with [so many friends](https://twitter.com/lachlanjc/status/1175075858643656704?s=20),
+& [randomly meet people](https://twitter.com/lachlanjc/status/1166825269845528589?s=20)
+in Washington Square Park. [Attending Adulting.dev](https://twitter.com/lachlanjc/status/1170469462480474113?s=20),
+the [NYC Design Systems Coalition](https://designsystems.nyc) meetup, & seeing
+Conan Gray live (again!) were all highlights, as well as just exploring the city
+& taking the subway to new places. I spent one day getting lost on Long Island
+Rail Road & judging at [TeenHacks LI](https://teenhacksli.com), another day
+mentoring at CodeDay NYC with [Melody](https://melody.dev) & [TJ](https://tjhorner.dev).
+One especially standout weekend was a trip to
+Frost Valley, NY with the NYU LGBTQ+ Center. Nestled in the forest, we had deep
+discussions, amazing workshops, & ended the days with campfires.
 
-[My coursework](https://ima.lachlanjc.com) has been incredibly stimulating. I’m incredibly proud of (link cw: sexual abuse) [“One Day This Kid Will Talk”](https://ima.lachlanjc.com/one_day_this_kid/), an interactive essay I wrote about queer coming-of-age. I also wrote [“Imagining Worlds Post-Human”](https://ima.lachlanjc.com/imagining_worlds_post_human/), short posts about [digital storytelling](https://ima.lachlanjc.com/2019-09-15_cl_scott_mccloud_and_digital_storytelling/), tried my hand at [digital animation](https://ima.lachlanjc.com/2019-10-30_cl_midterm_animation_project/), [made a Janelle Monáe visualizer](https://ima.lachlanjc.com/2019-09-29_cc_week_4_project/), [projection-mapped shoes](https://ima.lachlanjc.com/2019-11-15_cl_projection_project/), & lots more.
+[My coursework](https://ima.lachlanjc.com) (all open source) has been incredibly stimulating. I’m
+incredibly proud of (link cw: sexual abuse) [“One Day This Kid Will Talk,”](https://ima.lachlanjc.com/one_day_this_kid/)
+an interactive essay I wrote about queer coming-of-age. I also wrote
+[“Imagining Worlds Post-Human”](https://ima.lachlanjc.com/imagining_worlds_post_human/),
+short posts about [digital storytelling](https://ima.lachlanjc.com/2019-09-15_cl_scott_mccloud_and_digital_storytelling/),
+tried my hand at [digital animation](https://ima.lachlanjc.com/2019-10-30_cl_midterm_animation_project/),
+[made a Janelle Monáe visualizer](https://ima.lachlanjc.com/2019-09-29_cc_week_4_project/),
+[projection-mapped shoes](https://ima.lachlanjc.com/2019-11-15_cl_projection_project/),
+& lots more.
 
-</Container>
+The semester ended with my department’s Winter Show, where undergrads & grad
+students present their best work. I helped create [Autovendor](https://ima.lachlanjc.com/2019-12-02_cl_final_project/),
+a subversive, interactive vending machine. I primarily exhibited [Gun Funded](https://gunfunded.com),
+a website [I made](https://ima.lachlanjc.com/2019-11-26_cc_final_project/)
+visualizing the gun lobby’s funding of U.S. Congress.
+You can watch me breifly demo the project during the livestream:
+
+<YouTube
+  url="https://youtu.be/11M3RLmayz8?t=2222"
+  title="Livestream of my segment at the IMA winter show"
+/>
+
+With that (& finals), I headed home to Pennsylvania after my first semester of
+college, to spend the holidays with my family before heading to Indiana to visit
+Matthew & friends for the New Year. I spent my last day of 2019 watching Cats.
+
+---
+
+I’m honestly the happiest I’ve ever been, getting to do creative work & travel
+all over the country, surrounded by amazing people who support me:
+Matthew, Superclub, Plum, Elliot, David, Elvin, Christine, Zach, Zoë,
+my family, & so many more. And thank you for caring about me enough to read this :)
+
+</Story>

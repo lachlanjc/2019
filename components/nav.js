@@ -8,7 +8,7 @@ import {
   NavLink
 } from 'theme-ui'
 import Link from 'next/link'
-import { Moon, GitHub } from 'react-feather'
+import { Moon } from 'react-feather'
 
 const NavButton = ({ sx, ...props }) => (
   <IconButton
@@ -74,6 +74,7 @@ const Nav = () => {
             sx={{
               alignItems: 'center',
               mr: 'auto !important',
+              lineHeight: 'title',
               ':hover img,:focus img': {
                 boxShadow: '0 0 0 2px'
               }
@@ -96,9 +97,6 @@ const Nav = () => {
         <Link href="/music" passHref>
           <NavLink as="a">Music</NavLink>
         </Link>
-        <NavButton as="a" href="https://github.com/lachlanjc/2019">
-          <GitHub size={24} />
-        </NavButton>
         <ColorSwitcher />
       </Container>
     </Box>

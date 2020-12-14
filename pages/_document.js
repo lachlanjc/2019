@@ -10,7 +10,12 @@ export default class extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <style>{`
+            :root { supported-color-schemes: light dark; }
+            body { overflow-x: hidden; }
+          `}</style>
+        </Head>
         <body>
           <InitializeColorMode />
           <Main />
