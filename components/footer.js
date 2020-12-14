@@ -3,9 +3,8 @@ import Ring from './activity/ring'
 import BGImg from './bg-img'
 import { Container, Box, Grid, Card } from 'theme-ui'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { Headphones, BookOpen } from 'react-feather'
+import { Headphones } from 'react-feather'
 
 const Footer = () => {
   const { pathname } = useRouter()

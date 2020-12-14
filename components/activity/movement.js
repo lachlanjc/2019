@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import useComponentSize from '@rehooks/component-size'
-import { Box, Card, useThemeUI } from 'theme-ui'
+import { Box, Card, Text, useThemeUI } from 'theme-ui'
 
 import raw from '../../data/movement.json'
 import { parseInt } from 'lodash'
@@ -16,9 +16,9 @@ const renderTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const data = payload[0] && payload[0].payload
     return (
-      <Card sx={{ p: 1 }}>
-        <p>{new Date(data.date).toLocaleDateString('en-us')}</p>
-        <p>{commaNumber(data.steps)} steps</p>
+      <Card sx={{ p: [2, 2] }}>
+        <strong>{new Date(data.date).toLocaleDateString('en-us')}</strong>
+        <Text as="p" variant="caption" my={0}>{commaNumber(data.steps)} steps</Text>
       </Card>
     )
   }

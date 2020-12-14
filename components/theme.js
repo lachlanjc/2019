@@ -147,6 +147,14 @@ const theme = {
       fontFamily: 'accent'
     }
   },
+  badges: {
+    pill: {
+      borderRadius: 'circle',
+      px: 2,
+      py: 1,
+      fontSize: 1
+    }
+  },
   buttons: {
     primary: {
       bg: 'primary',

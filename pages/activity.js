@@ -1,6 +1,7 @@
-import { Box, Container, Heading } from 'theme-ui'
+import { Box, Container, Grid, Heading } from 'theme-ui'
 import Meta from '../components/meta'
 import Header from '../components/header'
+import Stat from '../components/stat'
 import Movement from '../components/activity/movement'
 import Rings from '../components/activity/rings'
 import GitHub from 'react-github-calendar'
@@ -12,11 +13,22 @@ const ActivityPage = () => (
       description="Lachlan Campbell’s activity, productivity, health, & travel of 2019."
     />
     <Header bg="primary">Activity</Header>
+    <Grid
+      variant="layout.copy"
+      columns={[2, 4]}
+      gap={3}
+      sx={{ justifyContent: 'center', mb: [3, 4] }}
+    >
+      <Stat value={7} label="hackathons" color="red" />
+      <Stat value="2.5M" label="steps" color="orange" />
+      <Stat value={23} label="cities" color="green" />
+      <Stat value={24} label="flights" color="blue" />
+    </Grid>
     <Container
       variant="copy"
       sx={{
         mb: [4, 5],
-        article: { height: 133 },
+        article: { display: 'block', height: 133 },
         text: { fill: 'currentColor !important', opacity: 0.75 }
       }}
     >
@@ -26,7 +38,7 @@ const ActivityPage = () => (
       <GitHub username="lachlanjc" years={[2019]} fullYear={false} />
     </Container>
     <Heading as="h2" variant="headline">
-      Movement
+      Daily steps
     </Heading>
     <Movement />
     <Container
