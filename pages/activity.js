@@ -2,6 +2,7 @@ import { Box, Container, Grid, Heading } from 'theme-ui'
 import Meta from '../components/meta'
 import Header from '../components/header'
 import Stat from '../components/stat'
+import Repos from '../components/activity/repos'
 import Movement from '../components/activity/movement'
 import Rings from '../components/activity/rings'
 import GitHub from 'react-github-calendar'
@@ -36,6 +37,7 @@ const ActivityPage = () => (
         GitHub
       </Heading>
       <GitHub username="lachlanjc" years={[2019]} fullYear={false} />
+      <Repos />
     </Container>
     <Heading as="h2" variant="headline">
       Daily steps
