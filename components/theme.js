@@ -247,7 +247,7 @@ const theme = {
       borderRadius: 999,
       maxWidth: 256,
       mx: 'auto',
-      my: [4, 5]
+      my: 5
     }
   }
 }

@@ -1,6 +1,6 @@
 import { BaseStyles, Box, Container } from 'theme-ui'
 import BGImg from './bg-img'
-import theme from './theme'
+import theme, { colors } from './theme'
 
 export const Banner = ({ children }) => (
   <Box
@@ -63,7 +63,7 @@ const Story = props => (
         WebkitInitialLetter: '3',
         color: 'accent',
         fontWeight: 'bold',
-        WebkitTextStroke: theme.colors.yellow,
+        WebkitTextStroke: colors.yellow,
         WebkitTextStrokeWidth: '3px',
         WebkitTextFillColor: 'transparent',
         pr: 2,
@@ -81,36 +81,26 @@ const Story = props => (
         my: [4, 5]
       },
       hr: {
-        [theme.util.motion]: {
+        '@media (prefers-reduced-motion: no-preference) and (hover: hover)': {
           transition: 'transform 1.5s ease-in-out',
           ':hover': {
             transform: 'scaleY(8) scaleX(-8)'
           }
         },
         ':nth-of-type(1)': {
-          backgroundImage: `linear-gradient(${theme.colors.cyan} 33%, ${
-            theme.colors.blue
-          } 100%)`
+          backgroundImage: `linear-gradient(${colors.cyan} 33%, ${colors.blue} 100%)`
         },
         ':nth-of-type(2)': {
-          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${
-            theme.colors.green
-          } 100%)`
+          backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.green} 100%)`
         },
         ':nth-of-type(3)': {
-          backgroundImage: `linear-gradient(${theme.colors.yellow} 33%, ${
-            theme.colors.orange
-          } 100%)`
+          backgroundImage: `linear-gradient(${colors.yellow} 33%, ${colors.orange} 100%)`
         },
         ':nth-of-type(4)': {
-          backgroundImage: `linear-gradient(${theme.colors.orange} 33%, ${
-            theme.colors.red
-          } 100%)`
+          backgroundImage: `linear-gradient(${colors.orange} 33%, ${colors.red} 100%)`
         },
         ':nth-of-type(5)': {
-          backgroundImage: `linear-gradient(${theme.colors.smoke} 33%, ${
-            theme.colors.muted
-          } 100%)`
+          backgroundImage: `linear-gradient(${colors.smoke} 33%, ${colors.muted} 100%)`
         }
       }
     }}
