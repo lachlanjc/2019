@@ -26,7 +26,7 @@ const MusicPage = () => {
         <Heading as="h2" variant="headline">
           Awards
         </Heading>
-        <Grid gap={[3, 4]} columns={[null, 2]} sx={{ mb: [4, 5] }}>
+        <Grid gap={4} columns={[null, 2]} sx={{ mb: [4, 5] }}>
           <Artist
             label="Best New Artist"
             name="Conan Gray"
@@ -66,7 +66,7 @@ const MusicPage = () => {
       <Heading as="h2" variant="headline" sx={{ mt: [4, 5], mb: [3, 4] }}>
         Seasonal playlists
       </Heading>
-      <Grid columns={[null, 2, null, 3]} sx={{ p: 3 }}>
+      <Grid as="section" columns={[null, 2, null, 3]} py={3}>
         {Object.keys(seasons).map(season => (
           <div key={season} id={season}>
             <Heading as="h3" variant="subheadline" sx={{ pl: [36, 48] }}>

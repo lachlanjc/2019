@@ -16,11 +16,7 @@ export const colors = {
   yellow: '#f1c40f',
   green: '#33d6a6',
   cyan: '#5bc0de',
-  blue: '#338eda',
-
-  twitter: '#1da1f2',
-  facebook: '#3b5998',
-  instagram: '#e1306c'
+  blue: '#338eda'
 }
 
 const theme = {

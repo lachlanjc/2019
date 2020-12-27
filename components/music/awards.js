@@ -23,19 +23,13 @@ const Name = ({ fontSize, ...props }) => (
 )
 
 const Comment = props => (
-  <Text
-    sx={{
-      color: 'secondary',
-      fontSize: 1
-    }}
-    {...props}
-  />
+  <Text as="p" sx={{ color: 'secondary', fontSize: 1 }} {...props} />
 )
 
 export const Artist = ({ label, name, artwork, children }) => (
   <Box>
     <Grid
-      gap={4}
+      gap={[3, 4]}
       sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center', mb: 3 }}
     >
       <Avatar src={artwork} width={128} alt={name} />
@@ -51,7 +45,7 @@ export const Artist = ({ label, name, artwork, children }) => (
 export const Album = ({ label, name, artwork, artist, children, ...props }) => (
   <Box>
     <Grid
-      gap={4}
+      gap={[3, 4]}
       sx={{ gridTemplateColumns: '128px 1fr', alignItems: 'center', mb: 3 }}
     >
       <Artwork

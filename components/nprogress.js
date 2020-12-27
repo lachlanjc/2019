@@ -33,7 +33,6 @@ const Progress = ({ color = colors.accent }) => {
       #nprogress {
         pointer-events: none;
       }
-      
       #nprogress .bar {
         background: ${color};
         position: fixed;
@@ -43,8 +42,6 @@ const Progress = ({ color = colors.accent }) => {
         width: 100%;
         height: 3px;
       }
-
-      * { outline: 1px solid hotpink; }
     `}</style>
   )
 }

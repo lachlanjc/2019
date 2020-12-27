@@ -73,7 +73,7 @@ const Footer = () => {
     <Box
       key="footer"
       as="footer"
-      sx={{ bg: 'sunken', textAlign: 'center', px: 2, py: 3 }}
+      sx={{ bg: 'sunken', textAlign: 'center', py: 3 }}
     >
       <Container
         sx={{
