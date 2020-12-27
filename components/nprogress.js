@@ -1,121 +1,52 @@
-// Via https://github.com/sergiodxa/next-nprogress/issues/76#issuecomment-496487402
-import React from 'react'
 import NProgress from 'nprogress'
-import Router from 'next/router'
+import { useRouter } from 'next/router'
+import { useEffect } from 'react'
+import { colors } from './theme'
 
-class NProgressContainer extends React.Component {
-  static defaultProps = {
-    color: '#ec3750',
-    showAfterMs: 300,
-    spinner: true
-  }
+const Progress = ({ color = colors.accent }) => {
+  const router = useRouter()
 
-  timer = null
+  useEffect(() => {
+    let timeout
 
-  routeChangeStart = () => {
-    const { showAfterMs } = this.props
-    clearTimeout(this.timer)
-    this.timer = setTimeout(NProgress.start, showAfterMs)
-  }
-
-  routeChangeEnd = () => {
-    clearTimeout(this.timer)
-    NProgress.done()
-  }
-
-  componentDidMount() {
-    const { options } = this.props
-
-    if (options) {
-      NProgress.configure(options)
+    const start = () => {
+      timeout = setTimeout(NProgress.start, 100)
     }
 
-    Router.events.on('routeChangeStart', this.routeChangeStart)
-    Router.events.on('routeChangeComplete', this.routeChangeEnd)
-    Router.events.on('routeChangeError', this.routeChangeEnd)
-  }
+    const done = () => {
+      clearTimeout(timeout)
+      NProgress.done()
+    }
 
-  componentWillUnmount() {
-    clearTimeout(this.timer)
-    Router.events.off('routeChangeStart', this.routeChangeStart)
-    Router.events.off('routeChangeComplete', this.routeChangeEnd)
-    Router.events.off('routeChangeError', this.routeChangeEnd)
-  }
+    router.events.on('routeChangeStart', start)
+    router.events.on('routeChangeComplete', done)
+    router.events.on('routeChangeError', done)
+    return () => {
+      router.events.off('routeChangeStart', start)
+      router.events.off('routeChangeComplete', done)
+      router.events.off('routeChangeError', done)
+    }
+  }, [])
 
-  render() {
-    const { color, spinner } = this.props
+  return (
+    <style>{`
+      #nprogress {
+        pointer-events: none;
+      }
+      
+      #nprogress .bar {
+        background: ${color};
+        position: fixed;
+        z-index: 1031;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+      }
 
-    return (
-      <style jsx global>{`
-        #nprogress {
-          pointer-events: none;
-        }
-        #nprogress .bar {
-          background: ${color};
-          position: fixed;
-          z-index: 1031;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-        }
-        #nprogress .peg {
-          display: block;
-          position: absolute;
-          right: 0px;
-          width: 100px;
-          height: 100%;
-          box-shadow: 0 0 10px ${color}, 0 0 5px ${color};
-          opacity: 1;
-          -webkit-transform: rotate(3deg) translate(0px, -4px);
-          -ms-transform: rotate(3deg) translate(0px, -4px);
-          transform: rotate(3deg) translate(0px, -4px);
-        }
-        #nprogress .spinner {
-          display: ${spinner ? 'block' : 'none'};
-          position: fixed;
-          z-index: 1031;
-          top: 15px;
-          right: 15px;
-        }
-        #nprogress .spinner-icon {
-          width: 18px;
-          height: 18px;
-          box-sizing: border-box;
-          border: solid 2px transparent;
-          border-top-color: ${color};
-          border-left-color: ${color};
-          border-radius: 50%;
-          -webkit-animation: nprogresss-spinner 400ms linear infinite;
-          animation: nprogress-spinner 400ms linear infinite;
-        }
-        .nprogress-custom-parent {
-          overflow: hidden;
-          position: relative;
-        }
-        .nprogress-custom-parent #nprogress .spinner,
-        .nprogress-custom-parent #nprogress .bar {
-          position: absolute;
-        }
-        @-webkit-keyframes nprogress-spinner {
-          0% {
-            -webkit-transform: rotate(0deg);
-          }
-          100% {
-            -webkit-transform: rotate(360deg);
-          }
-        }
-        @keyframes nprogress-spinner {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
-    )
-  }
+      * { outline: 1px solid hotpink; }
+    `}</style>
+  )
 }
 
-export default NProgressContainer
+export default Progress
