@@ -7,7 +7,7 @@ const makeTitle = title => (title === name ? title : `${title} – ${name}`)
 const Meta = ({
   title = name,
   description = 'Looking back at Lachlan Campbell’s 2019.',
-  // image = 'https://hackathons.now.sh/card.png',
+  image = 'https://2019.lachlanjc.com/card.png',
   color = colors.primary
 }) => (
   <Head>
@@ -22,7 +22,6 @@ const Meta = ({
     <meta key="twitter_desc" name="twitter:description" content={description} />
     <meta key="theme_color" name="theme-color" content={color} />
     <meta key="tile_color" name="msapplication-TileColor" content={color} />
-    {/*
     <meta key="og_img" property="og:image" content={image} />
     <meta
       key="twitter_card"
@@ -57,7 +56,6 @@ const Meta = ({
       href="/favicon-16x16.png"
     />
     <link key="manifest" rel="manifest" href="/site.webmanifest" />
-    */}
   </Head>
 )
 
