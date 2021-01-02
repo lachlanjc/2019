@@ -11,20 +11,20 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "10.0.4",
+    "@next/mdx": "10.0.3",
     "@rehooks/component-size": "^1.0.3",
     "comma-number": "^2.0.1",
     "lodash": "^4.17.20",
-    "next": "10.0.4",
+    "next": "10.0.3",
     "nprogress": "^0.2.0",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-feather": "^2.0.9",
     "react-github-calendar": "^2.0.1",
-    "react-player": "^2.7.2",
+    "react-player": "^2.7.0",
     "react-song-embed": "^1.0.0",
     "recharts": "^2.0.0-beta.1",
-    "theme-ui": "^0.3.5"
+    "theme-ui": "^0.3.4"
   },
   "license": "MIT"
 }
