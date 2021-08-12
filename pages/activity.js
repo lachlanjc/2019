@@ -36,7 +36,7 @@ const ActivityPage = () => (
       <Heading as="h2" variant="headline">
         GitHub
       </Heading>
-      <GitHub username="lachlanjc" years={[2019]} fullYear={false} />
+      <GitHub username="lachlanjc" year={2019} />
       <Repos />
     </Container>
     <Heading as="h2" variant="headline">
