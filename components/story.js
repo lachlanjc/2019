@@ -1,6 +1,8 @@
 import { BaseStyles, Box, Container } from 'theme-ui'
+import { colors } from './theme'
+
 import BGImg from './bg-img'
-import theme, { colors } from './theme'
+import imgCover from '../public/cover.jpg'
 
 export const Banner = ({ children }) => (
   <Box
@@ -37,10 +39,8 @@ export const Banner = ({ children }) => (
     }}
   >
     <BGImg
-      src="/cover.jpg"
+      src={imgCover}
       alt="Hudson river/Jersey City at sunset, seen from Battery Park, Manhattan"
-      width={2224}
-      height={1251}
       priority
     />
     {children}
@@ -58,16 +58,18 @@ const Story = props => (
         maxWidth: 'copyPlus',
         mx: 'auto'
       },
-      'p:first-of-type::first-letter': {
-        initialLetter: '3',
-        WebkitInitialLetter: '3',
-        color: 'accent',
-        fontWeight: 'bold',
-        WebkitTextStroke: colors.yellow,
-        WebkitTextStrokeWidth: '3px',
-        WebkitTextFillColor: 'transparent',
-        pr: 2,
-        pb: 1
+      '@supports (initial-letter: 3) or (-webkit-initial-letter: 3)': {
+        'p:first-of-type::first-letter': {
+          initialLetter: '3',
+          WebkitInitialLetter: '3',
+          color: 'accent',
+          fontWeight: 'bold',
+          WebkitTextStroke: colors.yellow,
+          WebkitTextStrokeWidth: '3px',
+          WebkitTextFillColor: 'transparent',
+          pr: 2,
+          pb: 1
+        }
       },
       '> figure': {
         my: 4

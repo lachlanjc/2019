@@ -1,6 +1,7 @@
 import Content from './footer.mdx'
 import Ring from './activity/ring'
 import BGImg from './bg-img'
+import imgCover from '../public/cover.jpg'
 import { Container, Box, Grid, Card } from 'theme-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -40,15 +41,15 @@ const Footer = () => {
       }}
     >
       {pathname !== '/' && (
-        <Link href="/" passHref>
+        <Link href="/" legacyBehavior passHref>
           <Card as="a" sx={{ overflow: 'hidden' }}>
-            <BGImg src="/cover.jpg" width={2224} height={1251} alt="New York at sunset, cover image" />
+            <BGImg src={imgCover} alt="New York at sunset, cover image" />
             <h2>Story</h2>
           </Card>
         </Link>
       )}
       {pathname !== '/activity' && (
-        <Link href="/activity" passHref>
+        <Link href="/activity" legacyBehavior passHref>
           <Card as="a">
             <Ring size={96} />
             <h2>Activity</h2>
@@ -56,7 +57,7 @@ const Footer = () => {
         </Link>
       )}
       {pathname !== '/music' && (
-        <Link href="/music" passHref>
+        <Link href="/music" legacyBehavior passHref>
           <Card
             as="a"
             sx={{

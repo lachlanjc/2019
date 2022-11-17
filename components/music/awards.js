@@ -51,7 +51,7 @@ export const Album = ({ label, name, artwork, artist, children, ...props }) => (
       <Artwork
         src={artwork.replace('1024x1024', '256x256')}
         alt={name}
-        size={256}
+        size={128}
         {...props}
       />
       <Box>
@@ -75,7 +75,7 @@ export const CD = ({ label, name, artwork, artist, children, ...props }) => (
     <Artwork
       src={artwork.replace('1024x1024', '256x256')}
       alt={name}
-      size={256}
+      size={128}
       {...props}
     />
     <Box sx={{ mt: 2 }}>

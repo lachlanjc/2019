@@ -69,7 +69,7 @@ const Nav = () => {
           }
         }}
       >
-        <Link href="/" passHref>
+        <Link href="/" legacyBehavior passHref>
           <Flex
             as="a"
             sx={{
@@ -92,10 +92,10 @@ const Nav = () => {
             </NavLink>
           </Flex>
         </Link>
-        <Link href="/activity" passHref>
+        <Link href="/activity" legacyBehavior passHref>
           <NavLink as="a">Activity</NavLink>
         </Link>
-        <Link href="/music" passHref>
+        <Link href="/music" legacyBehavior passHref>
           <NavLink as="a">Music</NavLink>
         </Link>
         <ColorSwitcher />

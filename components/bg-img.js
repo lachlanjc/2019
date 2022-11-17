@@ -13,7 +13,7 @@ const gx = gradient =>
         '&:after': {
           content: '""',
           position: 'absolute',
-          backgroundImage: gradient,
+          backgroundImage: `linear-gradient(${gradient})`,
           top: 0,
           left: 0,
           right: 0,
@@ -24,21 +24,25 @@ const gx = gradient =>
 
 const BGImg = ({ gradient, ...props }) => (
   <Box
+    as="figure"
     sx={{
       position: 'absolute',
       display: 'block',
       top: 0,
       left: 0,
-      right: 0,
-      bottom: 0,
-      zIndex: 0,
+      width: '100%',
+      height: '100%',
       ...gx(gradient),
-      '> div': { height: '100%', width: '100%' },
-      img: { objectFit: 'cover', objectPosition: 'center' },
+      '> span': { height: '100% !important', width: '100%' },
       '~ *': { position: 'relative' }
     }}
   >
-    <Image layout="responsive" {...props} />
+    <Image
+      fill
+      style={{ objectFit: 'cover', objectPosition: 'center' }}
+      placeholder="blur"
+      {...props}
+    />
   </Box>
 )
 
