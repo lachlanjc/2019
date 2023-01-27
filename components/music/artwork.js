@@ -33,6 +33,7 @@ const Artwork = ({ src, alt, size = 64 }) => (
       width={size}
       height={size}
       alt={`${alt} artwork`}
+      unoptimized
     />
     <PlayButton />
   </Box>
